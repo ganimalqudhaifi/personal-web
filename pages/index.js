@@ -8,8 +8,8 @@ export default function Index() {
 				<title>Personal Web - Ganim Alqudhaifi</title>
 			</Head>
 
-			<div className="w-full min-h-full bg-gray-800">
-				<article className="max-w-2xl px-6 py-24 mx-auto space-y-12 bg-gray-800 text-gray-50">
+			<div className="w-full min-h-full bg-zinc-900 bg-[url('/svg/diagonal-lines.svg')]">
+				<article className="max-w-6xl px-6 py-24 mx-auto space-y-12 text-gray-50">
 					<div className="w-full mx-auto space-y-4 text-center">
 						<p className="text-xs font-semibold tracking-wider uppercase">#Hello #World</p>
 						<h1 className="text-4xl font-bold leading-tight md:text-5xl">Welcome!!!</h1>
