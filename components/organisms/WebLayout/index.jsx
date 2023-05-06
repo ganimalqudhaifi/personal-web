@@ -9,7 +9,7 @@ export default function Index({ children }) {
       </Head>
 
       <div className="w-full min-h-full bg-zinc-900 bg-[url('/svg/diagonal-lines.svg')]">
-        <div className="max-w-6xl px-6 mx-auto space-y-12 text-gray-50">
+        <div className="flex flex-col min-h-screen max-w-6xl px-6 mx-auto space-y-12 text-gray-50">
           <nav className="grid grid-cols-2 py-4 border-b-[0.5px] border-zinc-800">
             <div className="flex items-center space-x-3">
               <div className="flex justify-center items-center w-14 h-14 bg-zinc-800 bg-opacity-50 border-[1px] border-zinc-700 p-2 rounded-full">
@@ -52,8 +52,7 @@ export default function Index({ children }) {
               </li>
             </ul>
           </nav>
-
-          {children}
+          <div className="flex-grow">{children}</div>
 
           <footer className="grid grid-cols-2 py-4 border-t-[0.5px] border-zinc-800">
             <p className="text-sm text-zinc-400">© 2023 All Rights Reserved.</p>
