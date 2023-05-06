@@ -25,31 +25,29 @@ export default function Index({ children }) {
             <ul className="flex gap-4 justify-end items-center">
               <li>
                 <Link
-                  href={
-                    "https://www.linkedin.com/in/andi-muhammad-ganim-alqudhaifi-9669b0214/"
-                  }
+                  href={"/"}
                   terget="_blank"
                   className="text-sm text-zinc-400 hover:text-zinc-200"
                 >
-                  Linkedin
+                  Home
                 </Link>
               </li>
               <li>
                 <Link
-                  href={"https://github.com/ganimalqudhaifi"}
+                  href={"/about"}
                   terget="_blank"
                   className="text-sm text-zinc-400 hover:text-zinc-200"
                 >
-                  Github
+                  About
                 </Link>
               </li>
               <li>
                 <Link
-                  href={"https://www.instagram.com/ganimalqudhaifi/"}
+                  href={"/project"}
                   terget="_blank"
                   className="text-sm text-zinc-400 hover:text-zinc-200"
                 >
-                  Instagram
+                  Project
                 </Link>
               </li>
             </ul>
