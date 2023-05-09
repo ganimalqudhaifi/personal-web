@@ -7,11 +7,11 @@ export default function Index() {
     <>
       <WebLayout>
         <div>
-          <h4 className="text-4xl text-zinc-100 font-semibold text-center">
+          <h4 className="text-2xl sm:text-3xl md:text-4xl text-gray-200 font-semibold text-center">
             Project
           </h4>
 
-          <section className="text-zinc-200">
+          <section className="text-gray-200">
             <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
               <Link
                 rel="noopener noreferrer"
@@ -24,13 +24,13 @@ export default function Index() {
                   width={1022}
                   height={560}
                   alt=""
-                  className="object-contain ml-4 w-full h-64 rounded sm:h-96 lg:col-span-7 bg-zinc-900"
+                  className="object-contain ml-4 w-11/12 md:w-full h-64 sm:h-80 md:h-96 rounded lg:col-span-7 bg-zinc-900"
                 />
-                <div className="p-6 space-y-2 lg:col-span-5 text-zinc-300">
+                <div className="p-6 space-y-2 lg:col-span-5 text-gray-300">
                   <h3 className="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">
                     Financial Records
                   </h3>
-                  <span className="text-xs text-zinc-400">April 2023</span>
+                  <span className="text-xs text-gray-400">April 2023</span>
                   <p>
                     Financial Records adalah sebuah web pencatatan keuangan yang
                     dibuat menggunakan framework dari NextJS.
