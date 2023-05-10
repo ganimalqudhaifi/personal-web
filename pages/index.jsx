@@ -23,8 +23,8 @@ export default function Index() {
               Hi! I&apos;m Andi Muhammad Ganim Alqudhaifi 👋
             </p>
 
-            <div className="text-center mt-5">
-              <div>
+            <div className="text-center mt-5 space-y-1">
+              <div className="flex flex-wrap justify-center gap-y-1">
                 <span className="text-xs font-medium mr-2 px-2.5 py-0.5 rounded bg-blue-900 text-blue-300">
                   Web Developer
                 </span>
@@ -35,7 +35,7 @@ export default function Index() {
                   React Developer
                 </span>
               </div>
-              <div>
+              <div className="flex flex-wrap justify-center gap-y-1">
                 <span className="text-xs font-medium mr-2 px-2.5 py-0.5 rounded bg-green-900 text-green-300">
                   HTML
                 </span>
@@ -49,7 +49,7 @@ export default function Index() {
                   NoSQL
                 </span>
               </div>
-              <div>
+              <div className="flex flex-wrap justify-center gap-y-1">
                 <span className="text-xs font-medium mr-2 px-2.5 py-0.5 rounded bg-purple-900 text-purple-300">
                   TailwindCSS
                 </span>
@@ -63,7 +63,7 @@ export default function Index() {
                   NextJS
                 </span>
               </div>
-              <div>
+              <div className="flex flex-wrap justify-center gap-y-1">
                 <span className="text-xs font-medium mr-2 px-2.5 py-0.5 rounded bg-green-900 text-green-300">
                   VSCode
                 </span>
