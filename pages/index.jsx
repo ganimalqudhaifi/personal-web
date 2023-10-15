@@ -1,9 +1,5 @@
-import { UniversalLayout } from "../components/layouts";
+import { PrimaryLayout } from "../components/layouts";
 
 export default function Home() {
-  return (
-    <UniversalLayout>
-      Hello World
-    </UniversalLayout>
-  )
+  return <PrimaryLayout></PrimaryLayout>;
 }
