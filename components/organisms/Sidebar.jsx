@@ -21,8 +21,8 @@ const navLinks = [
     Icon: PiNewspaperClipping
   },
   {
-    text: "Reference",
-    href: "/reference",
+    text: "References",
+    href: "/references",
     Icon: PiSelectionBackground
   },
 ]
