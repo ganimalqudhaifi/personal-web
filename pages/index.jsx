@@ -9,13 +9,13 @@ export default function Home() {
     <PrimaryLayout activeIndex={0}>
       <div>
         <h2 className="text-4xl font-extrabold mb-2.5">Hi, I&apos;m Alqi <span className="animate-spin">👋</span></h2>
-        <p className="tracking-wide text-[#c3bcc3]">Programing is a subject that i focused on the most. I have a strong passion for coding, with a keen attention to architectural design, maintainability, and writing clean code. I believe in crafting websites that not only works efficiently but is also easy to understand and maintain. My goal is to create elegant solutions that solve complex problems while maintaining a high level of code quality and readability.</p>
+        <p className="tracking-wide text-[#c3bcc3]">I have a strong passion for coding, with a keen attention to architectural design, maintainability, and writing clean code. I believe in crafting websites that not only works efficiently but is also easy to understand and maintain. My goal is to create elegant solutions that solve complex problems while maintaining a high level of code quality and readability.</p>
       </div>
       <Divider/>
       <div>
         <div className="flex items-center space-x-2"><BiCodeAlt size={24}/><h2 className="text-xl tracking-tight">Skills</h2></div>
         <p className="mt-2 mb-6 text-zinc-400">My Conding Skills</p>
-        <div className="flex space-x-4">
+        <div className="flex flex-wrap gap-5">
           <Image src="/svg/reactjs.svg" alt="reactjs icon" width={36} height={36}/>
           <SiNextdotjs size={36}/>
           <SiTailwindcss size={36} className="text-[#38bdf8]"/>
