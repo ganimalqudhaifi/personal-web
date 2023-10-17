@@ -15,7 +15,7 @@ export default function PrimaryLayout({ children, activeIndex }) {
           <button className="absolute top-5 right-5 p-1 text-white border rounded lg:hidden" onClick={() => setIsOpen(!isOpen)}><RxHamburgerMenu/></button>
         </header>
         <main className="w-full max-w-3xl text-white">
-          <div className="p-8">
+          <div className="p-8 mb-10">
             {children}
           </div>
         </main>
