@@ -42,14 +42,14 @@ const certificateLists = [
 export default function Home() {
   return (
     <PrimaryLayout activeIndex={0}>
-      <div>
-        <h2 className="text-[32px] font-extrabold">Hi, I&apos;m Alqi <span className="inline-block animate-wiggle">👋</span></h2>
-        <ul className="flex space-x-8 mb-3.5 text-zinc-400 list-disc list-inside">
+      <div className="tracking-tight">
+        <h2 className="mb-1 text-[32px] tracking-tight font-extrabold">Hi, I&apos;m Alqi <span className="inline-block animate-wiggle">👋</span></h2>
+        <ul className="mb-6 text-zinc-400 list-disc list-inside lg:flex lg:space-x-8">
           <li>Front-End Developer</li>
           <li>Based in Depok <span className="text-sm">ID</span></li>
         </ul>
-        <p className="tracking-wide text-zinc-300">I have a strong passion for coding, with a keen focus on architectural design, maintainability, and the art of crafting clean code. I am dedicated to developing websites that not only function efficiently but are also designed for ease of comprehension and long-term maintenance.</p>
-        <p className="tracking-wide text-zinc-300 mt-4">My primary objective is to engineer elegant solutions that tackle intricate problems, while upholding a superior standard of code quality and readability.</p>
+        <p className="text-zinc-300">I have a strong passion for coding, with a keen focus on architectural design, maintainability, and the art of crafting clean code. I am dedicated to developing websites that not only function efficiently but are also designed for ease of comprehension and long-term maintenance.</p>
+        <p className="text-zinc-300 mt-4">My primary objective is to engineer elegant solutions that tackle intricate problems, while upholding a superior standard of code quality and readability.</p>
       </div>
       
       <Divider/>
@@ -65,7 +65,7 @@ export default function Home() {
                   <Image alt={`${certificate.instance} logo`} src={`/logo/${certificate.instance}.png`} width={75} height={75} className="w-16 rounded shadow"/>
                   <div className="">
                     <p className="text-indigo-300 text-sm capitalize">{certificate.instance}</p>
-                    <p className="mb-0.5 text-zinc-400 leading-tight">{certificate.title}</p>
+                    <p className="mb-0.5 text-zinc-400 leading-tight tracking-tight">{certificate.title}</p>
                     <p className="text-zinc-500 text-sm">{certificate.date}</p>
                   </div>
                 </div>
