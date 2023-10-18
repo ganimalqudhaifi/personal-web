@@ -2,7 +2,7 @@ import Image from "next/image";
 import Divider from "../components/Divider";
 import { PrimaryLayout } from "../components/layouts";
 import { PiCertificate, PiCodeBold } from 'react-icons/pi';
-import { SiJest, SiTailwindcss, SiNextdotjs } from 'react-icons/si'
+import { SiJest, SiTailwindcss, SiNextdotjs, SiNodedotjs } from 'react-icons/si'
 import { BiLinkExternal } from 'react-icons/bi';
 import Link from "next/link";
 
@@ -84,6 +84,8 @@ export default function Home() {
         <div className="flex flex-wrap gap-6">
           <Image src="/svg/reactjs.svg" alt="reactjs icon" width={36} height={36}/>
           <SiNextdotjs size={36}/>
+          <SiNodedotjs size={36} className="text-emerald-600"/>
+          <Image src="/logo/mongodb.png" alt="firebase icon" width={36} height={36}/>
           <SiTailwindcss size={36} className="text-[#38bdf8]"/>
           <SiJest size={36} className="text-red-600"/>
           <Image src="/svg/firebase.svg" alt="firebase icon" width={36} height={36}/>
