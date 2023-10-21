@@ -32,7 +32,7 @@ export default function References() {
     <PrimaryLayout activeIndex={3}>
       <div>
         <h1 className="text-2xl font-bold mb-2">References</h1>
-        <p className="text-zinc-400">Recomendation of discovered source that I used.</p>
+        <p className="text-zinc-400">Recomendation of discovered source that I used</p>
       </div>
 
       <Divider/>

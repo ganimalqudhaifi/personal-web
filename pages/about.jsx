@@ -7,7 +7,7 @@ export default function About() {
     <PrimaryLayout activeIndex={2}>
       <div>
         <h1 className="text-2xl font-bold mb-2">About</h1>
-        <p className="text-zinc-400">A short story about me.</p>
+        <p className="text-zinc-400">A short story about me</p>
       </div>
 
       <Divider />

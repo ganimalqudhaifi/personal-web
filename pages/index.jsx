@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <PrimaryLayout activeIndex={0}>
       <div>
-        <h2 className="mb-1 text-3xl font-extrabold">Hi, I&apos;m Alqi <span className="inline-block animate-wiggle">👋</span></h2>
+        <h2 className="mb-2 text-3xl font-extrabold">Hi, I&apos;m Alqi <span className="inline-block animate-wiggle">👋</span></h2>
         <ul className="mb-6 text-zinc-400 list-disc list-inside lg:flex lg:space-x-8">
           <li>Front-End Developer</li>
           <li>Based in Depok <span className="text-sm">ID</span></li>
