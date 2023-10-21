@@ -42,8 +42,8 @@ const certificateLists = [
 export default function Home() {
   return (
     <PrimaryLayout activeIndex={0}>
-      <div className="tracking-tight">
-        <h2 className="mb-1 text-[32px] tracking-tight font-extrabold">Hi, I&apos;m Alqi <span className="inline-block animate-wiggle">👋</span></h2>
+      <div>
+        <h2 className="mb-1 text-3xl font-extrabold">Hi, I&apos;m Alqi <span className="inline-block animate-wiggle">👋</span></h2>
         <ul className="mb-6 text-zinc-400 list-disc list-inside lg:flex lg:space-x-8">
           <li>Front-End Developer</li>
           <li>Based in Depok <span className="text-sm">ID</span></li>
@@ -55,17 +55,17 @@ export default function Home() {
       <Divider/>
 
       <div>
-        <div className="flex items-center space-x-2 text-zinc-200"><PiCertificate size={24}/><h2 className="text-xl tracking-tight">Certificates</h2></div>
+        <div className="flex items-center space-x-2 text-zinc-200"><PiCertificate size={24}/><h2 className="text-xl ">Certificates</h2></div>
         <p className="mt-2 mb-4 text-zinc-400">My Course Completion Certificates</p>
         <div className="space-y-4">
           {
             certificateLists.map((certificate, i) => (
               <div key={i} className="group/certificate flex justify-between items-center p-2 bg-zinc-600/5 border border-zinc-800/60 rounded shadow cursor-pointer duration-200 subpixel-antialiased hover:border-zinc-700/50 hover:scale-[1.02]">
                 <div className="flex items-center space-x-3">
-                  <Image alt={`${certificate.instance} logo`} src={`/logo/${certificate.instance}.png`} width={75} height={75} className="w-16 rounded shadow"/>
+                  <Image alt={`${certificate.instance} logo`} src={`/logo/${certificate.instance}.png`} width={64} height={64} className="w-16 rounded shadow" priority/>
                   <div className="">
                     <p className="text-indigo-300 text-sm capitalize">{certificate.instance}</p>
-                    <p className="mb-0.5 text-zinc-400 leading-tight tracking-tight">{certificate.title}</p>
+                    <p className="mb-0.5 text-zinc-400">{certificate.title}</p>
                     <p className="text-zinc-500 text-sm">{certificate.date}</p>
                   </div>
                 </div>
@@ -79,7 +79,7 @@ export default function Home() {
       <Divider/>
 
       <div>
-        <div className="flex items-center space-x-2 text-zinc-200"><PiCodeBold size={24}/><h2 className="text-xl tracking-tight">Skills</h2></div>
+        <div className="flex items-center space-x-2 text-zinc-200"><PiCodeBold size={24}/><h2 className="text-xl ">Skills</h2></div>
         <p className="mt-2 mb-6 text-zinc-400">My Programing Skills</p>
         <div className="flex flex-wrap gap-6">
           <Image src="/svg/reactjs.svg" alt="reactjs icon" width={36} height={36}/>
