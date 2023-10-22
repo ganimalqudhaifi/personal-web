@@ -105,7 +105,7 @@ export default function References() {
           {
             uiLists.map((ui, i) => (
               <div key={i} className="flex justify-between items-center p-2 bg-zinc-600/5 border border-zinc-800/60 rounded shadow">
-                <p>{ui.name}</p>
+                <p className="text-[15px] sm:text-base">{ui.name}</p>
                 <Link href={ui.href} target="_blank" className="flex space-x-2 text-xl duration-300 hover:text-zinc-300"><PiLinkSimple/></Link>
               </div>
             ))
