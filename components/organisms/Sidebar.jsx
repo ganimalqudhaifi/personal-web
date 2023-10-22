@@ -3,6 +3,7 @@ import Image from "next/image";
 import { GoHome } from 'react-icons/go'
 import { PiSelectionBackground, PiNewspaperClipping, PiBrowsersLight } from 'react-icons/pi'
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const navLinks = [
   {
@@ -27,7 +28,7 @@ const navLinks = [
   },
 ]
 
-export default function Sidebar({activeIndex}) {
+export default function Sidebar({activeIndex, handleMenuOpen}) {
   return (
     <div className="flex items-center lg:flex-col group-[.is-open]:flex-col">
       <div className="p-4 relative flex justify-between items-center w-full border-b border-zinc-800 md:p-6 lg:p-0 lg:border-0">
@@ -35,7 +36,7 @@ export default function Sidebar({activeIndex}) {
           <Image alt="profile picture" src="/profile-picture.jpg" width={100} height={100} className="w-10 lg:w-28 rounded-full" priority/>
           <p className="font-semibold tracking-wide text-lg lg:text-xl text-gray-100">Ganim Alqudhaifi</p>
         </div>
-        {/* Hamburger Menu */}
+        <button className="p-1 text-white border rounded lg:hidden" onClick={handleMenuOpen}><RxHamburgerMenu/></button>
       </div>
 
       <div className="hidden space-x-3 mt-2 text-zinc-400 lg:flex">
