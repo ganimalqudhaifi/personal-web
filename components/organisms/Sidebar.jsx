@@ -30,13 +30,14 @@ const navLinks = [
 export default function Sidebar({activeIndex}) {
   return (
     <div className="flex items-center lg:flex-col group-[.is-open]:flex-col">
-      <div className="relative flex justify-between items-center w-full">
+      <div className="p-4 relative flex justify-between items-center w-full border-b border-zinc-800 md:p-6 lg:p-0 lg:border-0">
         <div className="flex items-center space-x-3 lg:flex-col lg:space-y-3">
           <Image alt="profile picture" src="/profile-picture.jpg" width={100} height={100} className="w-10 lg:w-28 rounded-full" priority/>
           <p className="font-semibold tracking-wide text-lg lg:text-xl text-gray-100">Ganim Alqudhaifi</p>
         </div>
         {/* Hamburger Menu */}
       </div>
+
       <div className="hidden space-x-3 mt-2 text-zinc-400 lg:flex">
         <Link href="https://www.linkedin.com/in/andi-muhammad-ganim-alqudhaifi" target="_blank" className="duration-300 hover:text-zinc-300">
           <FaLinkedin size={19} />
@@ -48,8 +49,9 @@ export default function Sidebar({activeIndex}) {
           <FaInstagram size={19} />
         </Link>
       </div>
-      <nav className="hidden w-full lg:block group-[.is-open]:block">
-        <div className="w-full my-5 border-t border-zinc-700  lg:border-zinc-500"/>
+
+      <nav className="hidden w-full p-4 md:p-6 lg:p-0 lg:block group-[.is-open]:block">
+        <div className="hidden w-full my-5 border-t border-zinc-700 lg:block lg:border-zinc-500"/>
         <ul className="space-y-1">
           {
             navLinks.map((link, i) => (
