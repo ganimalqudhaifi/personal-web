@@ -60,7 +60,7 @@ export default function Home() {
         <div className="space-y-4">
           {
             certificateLists.map((certificate, i) => (
-              <div key={i} className="group/certificate flex justify-between items-center p-2 bg-zinc-600/5 border border-zinc-800/60 rounded shadow cursor-pointer duration-200 subpixel-antialiased hover:border-zinc-700/50 hover:scale-[1.02]">
+              <div key={i} className="group/certificate relative flex justify-between items-center p-2 bg-zinc-600/5 border border-zinc-800/60 rounded shadow cursor-pointer duration-200 subpixel-antialiased hover:border-zinc-700/50 hover:scale-[1.02] before:content-[''] before:absolute before:right-0 before:inset-y-0 before:w-32 before:hover:bg-gradient-to-r before:from-transparent before:via-zinc-900/80 before:to-zinc-900">
                 <div className="flex items-center space-x-3">
                   <Image alt={`${certificate.instance} logo`} src={`/logo/${certificate.instance}.png`} width={64} height={64} className="w-16 rounded shadow" priority/>
                   <div className="">
@@ -69,7 +69,7 @@ export default function Home() {
                     <p className="text-zinc-500 text-sm">{certificate.date}</p>
                   </div>
                 </div>
-                <Link href={certificate.href} target="_blank"><BiLinkExternal className="hidden w-6 h-6 mr-4 text-zinc-600 duration-300 hover:text-zinc-400 hover:scale-110 group-hover/certificate:block"/></Link>
+                <Link href={certificate.href} target="_blank"><BiLinkExternal className="hidden absolute right-0 top-1/2 -translate-y-1/2 w-6 h-6 mr-4 text-zinc-600 duration-300 hover:text-zinc-400 hover:scale-110 group-hover/certificate:block"/></Link>
               </div>
             ))
           }
