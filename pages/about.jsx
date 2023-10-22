@@ -14,7 +14,7 @@ export default function About() {
 
       <div>
         <p className="text-zinc-300/90">
-          Di pertengahan 2020 saya mengikuti seleksi penerimaan sekolah kedinasan. Saya berhasil lulus hingga tahap akhir, yaitu wawancara. Saat itu, salah seorang kandidat yang sedang menunggu giliran untuk di panggil seketika bertanya kepadak saya <q>apa kemampuan yang akan kamu tampilkan?</q>, kemudian saya menjawab dengan percaya diri bahwa saya memiliki kemampuan di bidang IT. Setelah itu dia menanyakan lagi <q>apakah kamu bisa melakukan coding?</q>. Pada waktu itu saya benar-benar tidak mengetahui apa itu coding dan saya merasa malu bahwa saya dengan percaya diri telah mengatakan bahwa saya berkemampuan di bidang IT.
+          Di pertengahan 2020 saya mengikuti seleksi penerimaan sekolah kedinasan. Saya berhasil lulus hingga tahap akhir, yaitu wawancara. Saat itu, salah seorang kandidat yang sedang menunggu giliran untuk di panggil seketika bertanya kepada saya <q>apa kemampuan yang akan kamu tampilkan?</q>, kemudian saya menjawab dengan percaya diri bahwa saya memiliki kemampuan di bidang IT. Setelah itu dia menanyakan lagi <q>apakah kamu bisa melakukan coding?</q>. Pada waktu itu saya benar-benar tidak mengetahui apa itu coding dan saya merasa malu bahwa saya dengan percaya diri telah mengatakan bahwa saya berkemampuan di bidang IT.
           <br/><br/>
           Singkat cerita saya gagal pada tahap wawancara tersebut. Beberapa waktu saya memutuskan untuk mendaftar kuliah di salah satu universitas yang cukup terkenal. Pada awal semester, semuanya berjalan dengan lancar, hingga pada akhirnya ketika memasuki semester baru, saya menghadapi masalah finansial dan tidak dapat melanjutkan perkuliahan tersebut.
           <br/><br/>
