@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Color Palette - UI Colors",
+    "href": "https://uicolors.app/"
+  },
+  {
+    "name": "Color Palette - Color Hunt",
+    "href": "https://colorhunt.co/"
+  },
+  {
+    "name": "Icons - Icons8",
+    "href": "https://icons8.com//"
+  },
+  {
+    "name": "Images - Unsplash",
+    "href": "https://unsplash.com/"
+  },
+  {
+    "name": "Images - Pexels",
+    "href": "https://www.pexels.com/"
+  },
+  {
+    "name": "Tailwind Component - Headless UI",
+    "href": "https://headlessui.com/"
+  },
+  {
+    "name": "Tailwind Component - Flowbite",
+    "href": "https://flowbite.com/"
+  },
+  {
+    "name": "Tailwind Component - Daisy UI",
+    "href": "https://daisyui.com/"
+  },
+  {
+    "name": "API - Foursquare",
+    "href": "https://location.foursquare.com/"
+  }
+]

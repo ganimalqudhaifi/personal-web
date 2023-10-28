@@ -1,6 +1,5 @@
-import { PrimaryLayout } from "../components/layouts";
+import PrimaryLayout from "../components/PrimaryLayout";
 import Divider from '../components/Divider';
-
 
 export default function About() {
   return (

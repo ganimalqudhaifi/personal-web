@@ -1,9 +1,8 @@
-import { PrimaryLayout } from "../components/layouts";
-import Divider from '../components/Divider';
 import Image from "next/image";
 import Link from "next/link";
 import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
-
+import PrimaryLayout from "../components/PrimaryLayout";
+import Divider from '../components/Divider';
 
 export default function Projects() {
   return (

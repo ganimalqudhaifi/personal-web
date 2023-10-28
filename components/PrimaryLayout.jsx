@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Sidebar } from "../organisms";
+import Sidebar from "./Sidebar";
 
 export default function PrimaryLayout({ children, activeIndex }) {
   const [isOpen, setIsOpen] = useState(false)
