@@ -4,11 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: "JetBrains Mono", monospace;
+  }
+}
+
 @layer components {
   html,
   body,
   #__next {
     height: 100%;
-    font-family: "JetBrains Mono", monospace;
   }
 }
