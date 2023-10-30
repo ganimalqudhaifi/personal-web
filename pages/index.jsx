@@ -51,17 +51,47 @@ export default function Home() {
       <div>
         <div className="flex items-center space-x-2 text-zinc-200"><PiCodeBold size={24}/><h2 className="text-xl ">Skills</h2></div>
         <p className="mt-2 mb-6 text-zinc-400">My Programing Skills</p>
-        <div className="flex flex-wrap gap-6">
-          <Image src="/svg/reactjs.svg" alt="reactjs icon" width={36} height={36}/>
-          <SiNextdotjs size={36}/>
-          <SiNodedotjs size={36} className="text-emerald-600"/>
-          <Image src="/logo/mongodb.png" alt="firebase icon" width={36} height={36}/>
-          <SiTailwindcss size={36} className="text-[#38bdf8]"/>
-          <SiJest size={36} className="text-red-600"/>
-          <Image src="/svg/firebase.svg" alt="firebase icon" width={36} height={36}/>
-          <Image src="/svg/javascript.svg" alt="javascript icon" width={36} height={36}/>
-          <Image src="/svg/html5.svg" alt="html5 icon" width={36} height={36}/>
-          <Image src="/svg/css3.svg" alt="css3 icon" width={36} height={36}/>
+        <div className="flex flex-wrap gap-2.5">
+          <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
+            <Image src="/svg/reactjs.svg" alt="reactjs icon" width={30} height={30}/>
+            <p className="text-sm text-zinc-500">React JS</p>
+          </div>
+          <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
+            <SiNextdotjs size={30}/>
+            <p className="text-sm text-zinc-500">Next JS</p>
+          </div>
+          <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
+            <SiNodedotjs size={30} className="text-emerald-600"/>
+            <p className="text-sm text-zinc-500">Node JS</p>
+          </div>
+          <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
+            <Image src="/logo/mongodb.png" alt="firebase icon" width={30} height={30}/>
+            <p className="text-sm text-zinc-500">Mongo DB</p>
+          </div>
+          <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
+            <SiTailwindcss size={30} className="text-[#38bdf8]"/>
+            <p className="text-sm text-zinc-500">Tailwind CSS</p>
+          </div>
+          <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
+            <SiJest size={30} className="text-red-600"/>
+            <p className="text-sm text-zinc-500">Jest</p>
+          </div>
+          <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
+            <Image src="/svg/firebase.svg" alt="firebase icon" width={30} height={30}/>
+            <p className="text-sm text-zinc-500">Firebase</p>
+          </div>
+          <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
+            <Image src="/svg/javascript.svg" alt="javascript icon" width={30} height={30}/>
+            <p className="text-sm text-zinc-500">Javascript</p>
+          </div>
+          <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
+            <Image src="/svg/html5.svg" alt="html5 icon" width={30} height={30}/>
+            <p className="text-sm text-zinc-500">HTML5</p>
+          </div>
+          <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
+            <Image src="/svg/css3.svg" alt="css3 icon" width={30} height={30}/>
+            <p className="text-sm text-zinc-500">CSS3</p>
+          </div>
         </div>
       </div>
     </PrimaryLayout>
