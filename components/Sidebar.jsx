@@ -31,7 +31,7 @@ const navLinks = [
 export default function Sidebar({activeIndex, handleMenuOpen}) {
   return (
     <div className="flex items-center lg:flex-col">
-      <div className="p-4 relative flex justify-between items-center w-full border-b border-zinc-800 md:p-6 lg:p-0 lg:border-0">
+      <div className="p-4 relative flex justify-between items-center w-full bg-zinc-900 border-b border-zinc-800 md:p-6 lg:p-0 lg:border-0">
         <div className="flex items-center space-x-3 lg:flex-col lg:space-y-3 lg:space-x-0">
           <Image alt="profile picture" src="/profile-picture.jpg" width={100} height={100} className="w-10 lg:w-28 rounded-full" priority/>
           <p className="font-semibold tracking-wide text-lg lg:text-xl text-gray-100">Ganim Alqudhaifi</p>
