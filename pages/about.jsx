@@ -21,7 +21,7 @@ export default function About() {
           <br/><br/>
           Mulai pada saat itu, saya berdedikasi untuk mempelajari pemrograman. Melalui beberapa sumber materi belajar yang tersedia, saya belajar secara mandiri. Saya menonton beberapa video di saluran youtube, membaca dokumentasi, berurusan dengan debugging dan error, hingga pada akhirnya saya mulai menyadari bahwa saya memiliki passion yang kuat pada bidang ini.
           <br/><br/>
-          Hingga pada saat ini, sebagai seorang pemrogram, saya sangat menikmati untuk mempelajari hal-hal baru, menyelesaikan masalah, mencari solusi terbaik, dan berkeinginan untuk dapat berkolaborasi dengan pemrogram lainnya.
+          Sejauh ini, sebagai seorang pemrogram, saya sangat menikmati untuk mempelajari hal-hal baru, mencoba untuk menyelesaikan masalah yang kompleks, mencari solusi terbaik, dan berkeinginan kuat untuk dapat berkolaborasi dengan pemrogram lainnya.
         </p>
       </div>
     </PrimaryLayout>
