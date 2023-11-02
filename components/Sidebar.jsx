@@ -51,7 +51,7 @@ export default function Sidebar({activeIndex, handleMenuOpen}) {
         </Link>
       </div>
 
-      <nav className="absolute top-full -translate-x-full w-80 h-screen p-4 bg-zinc-900/95 duration-300 lg:relative lg:translate-x-0 lg:w-full md:p-6 lg:p-0 lg:block group-[.is-open]:block group-[.is-open]:translate-x-0 z-50">
+      <nav className="absolute top-full -translate-x-full w-64 h-screen p-4 bg-zinc-900/95 duration-300 sm:w-72 lg:relative lg:translate-x-0 lg:w-full md:p-6 lg:p-0 lg:block group-[.is-open]:block group-[.is-open]:translate-x-0 z-50">
         <div className="hidden w-full my-5 border-t border-zinc-700 lg:block lg:border-zinc-500"/>
         <ul className="space-y-1">
           {
