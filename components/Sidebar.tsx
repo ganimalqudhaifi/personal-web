@@ -30,7 +30,7 @@ const navLinks = [
 
 interface SidebarProps {
   activeIndex: number,
-  handleMenuOpen: any
+  handleMenuOpen: () => void
 }
 
 export default function Sidebar({activeIndex, handleMenuOpen}: SidebarProps) {
