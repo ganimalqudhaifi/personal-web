@@ -28,7 +28,12 @@ const navLinks = [
   },
 ]
 
-export default function Sidebar({activeIndex, handleMenuOpen}) {
+interface SidebarProps {
+  activeIndex: number,
+  handleMenuOpen: any
+}
+
+export default function Sidebar({activeIndex, handleMenuOpen}: SidebarProps) {
   return (
     <div>
       <div className="p-4 relative flex justify-between items-center w-full bg-zinc-900 border-b border-zinc-800 md:p-6 lg:p-0 lg:border-0">

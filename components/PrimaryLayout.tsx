@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import Sidebar from "./Sidebar";
 
-export default function PrimaryLayout({ children, activeIndex }) {
-  const [isOpen, setIsOpen] = useState(false)
+interface PrimaryLayoutProps {
+  children: ReactNode,
+  activeIndex: number
+}
 
-  const handleMenuOpen = () => setIsOpen(!isOpen);
+export default function PrimaryLayout({ children, activeIndex }: PrimaryLayoutProps) {
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+
+  const handleMenuOpen = (): void => setIsOpen(!isOpen);
 
   return (
     <div className="w-full min-h-screen bg-zinc-900">
