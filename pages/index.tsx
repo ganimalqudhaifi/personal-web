@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { BiLinkExternal } from 'react-icons/bi';
 import { PiCertificate, PiCodeBold } from 'react-icons/pi';
-import { SiJest, SiTailwindcss, SiNextdotjs, SiNodedotjs } from 'react-icons/si'
+import { SiJest, SiTailwindcss, SiNextdotjs, SiNodedotjs, SiTypescript } from 'react-icons/si'
 
 import Divider from "../components/Divider";
 import PrimaryLayout from "../components/PrimaryLayout";
@@ -80,17 +80,21 @@ export default function Home() {
             <Image src="/svg/firebase.svg" alt="firebase icon" width={30} height={30}/>
             <p className="text-sm text-zinc-500">Firebase</p>
           </div>
-          <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
+          <div className="flex items-center space-x-2 p-2.5 pl-3.5 border border-zinc-800 rounded-full shadow">
             <Image src="/svg/javascript.svg" alt="javascript icon" width={30} height={30}/>
             <p className="text-sm text-zinc-500">Javascript</p>
           </div>
-          <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
+          <div className="flex items-center space-x-2 p-2.5 pl-3.5 border border-zinc-800 rounded-full shadow">
             <Image src="/svg/html5.svg" alt="html5 icon" width={30} height={30}/>
             <p className="text-sm text-zinc-500">HTML5</p>
           </div>
-          <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
+          <div className="flex items-center space-x-2 p-2.5 pl-3.5 border border-zinc-800 rounded-full shadow">
             <Image src="/svg/css3.svg" alt="css3 icon" width={30} height={30}/>
             <p className="text-sm text-zinc-500">CSS3</p>
+          </div>
+          <div className="flex items-center space-x-2 p-2.5 pl-3.5 border border-zinc-800 rounded-full shadow">
+            <SiTypescript size={30} className="text-[#2f74c0]"/>
+            <p className="text-sm text-zinc-500">Typescript</p>
           </div>
         </div>
       </div>

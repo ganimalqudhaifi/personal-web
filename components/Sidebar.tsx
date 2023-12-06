@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+
 import { GoHome } from 'react-icons/go'
-import { PiSelectionBackground, PiNewspaperClipping, PiBrowsersLight } from 'react-icons/pi'
-import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 import { RxHamburgerMenu } from "react-icons/rx";
+import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import { PiSelectionBackground, PiNewspaperClipping, PiBrowsersLight } from 'react-icons/pi'
 
 const navLinks = [
   {
@@ -28,7 +29,7 @@ const navLinks = [
   },
 ]
 
-interface SidebarProps {
+type SidebarProps = {
   activeIndex: number,
   handleMenuOpen: () => void
 }

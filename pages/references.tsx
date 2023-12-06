@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+
 import { PiBookBookmark, PiChalkboard, PiLinkSimple } from "react-icons/pi";
+
 import Divider from "../components/Divider";
 import PrimaryLayout from "../components/PrimaryLayout";
 import uiListReference from '../data/uiListReference.json';
