@@ -3,11 +3,21 @@ import Image from "next/image";
 
 import { BiLinkExternal } from 'react-icons/bi';
 import { PiCertificate, PiCodeBold } from 'react-icons/pi';
-import { SiJest, SiTailwindcss, SiNextdotjs, SiNodedotjs, SiTypescript } from 'react-icons/si'
 
-import Divider from "../components/Divider";
-import Layout from "../components/Layout";
 import certificateLists from '../data/certificateLists.json';
+import Layout from "../components/Layout";
+import Divider from "../components/Divider";
+import IconCSS from "../components/icons/IconCSS";
+import IconJest from "../components/icons/IconJest";
+import IconHTML from "../components/icons/IconHTML";
+import IconNextJS from "../components/icons/IconNextJs";
+import IconNodeJS from "../components/icons/IconNodeJS";
+import IconMongoDB from "../components/icons/IconMongoDB";
+import IconReactJS from "../components/icons/IconReactJS";
+import IconFirebase from "../components/icons/IconFirebase";
+import IconTypescript from "../components/icons/IconTypeScript";
+import IconJavascript from "../components/icons/IconJavascript";
+import IconTailwindCSS from '../components/icons/IconTailwindCSS';
 
 export default function Home() {
   return (
@@ -53,47 +63,47 @@ export default function Home() {
         <p className="mt-2 mb-6 text-zinc-400">My Programing Skills</p>
         <div className="flex flex-wrap gap-2.5">
           <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
-            <Image src="/svg/reactjs.svg" alt="reactjs icon" width={30} height={30}/>
+            <IconReactJS size={30}/>
             <p className="text-sm text-zinc-500">React JS</p>
           </div>
           <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
-            <SiNextdotjs size={30}/>
+            <IconNextJS size={30}/>
             <p className="text-sm text-zinc-500">Next JS</p>
           </div>
           <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
-            <SiNodedotjs size={30} className="text-emerald-600"/>
+            <IconNodeJS size={30}/>
             <p className="text-sm text-zinc-500">Node JS</p>
           </div>
           <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
-            <Image src="/logo/mongodb.png" alt="mongodb icon" width={30} height={30}/>
+            <IconMongoDB size={30}/>
             <p className="text-sm text-zinc-500">Mongo DB</p>
           </div>
           <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
-            <SiTailwindcss size={30} className="text-[#38bdf8]"/>
+            <IconTailwindCSS size={30}/>
             <p className="text-sm text-zinc-500">Tailwind CSS</p>
           </div>
           <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
-            <SiJest size={30} className="text-red-600"/>
+            <IconJest size={30}/>
             <p className="text-sm text-zinc-500">Jest</p>
           </div>
           <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
-            <Image src="/svg/firebase.svg" alt="firebase icon" width={30} height={30}/>
+            <IconFirebase size={30}/>
             <p className="text-sm text-zinc-500">Firebase</p>
           </div>
           <div className="flex items-center space-x-2 p-2.5 pl-3.5 border border-zinc-800 rounded-full shadow">
-            <Image src="/svg/javascript.svg" alt="javascript icon" width={30} height={30}/>
+            <IconJavascript size={30}/>
             <p className="text-sm text-zinc-500">Javascript</p>
           </div>
           <div className="flex items-center space-x-2 p-2.5 pl-3.5 border border-zinc-800 rounded-full shadow">
-            <Image src="/svg/html5.svg" alt="html5 icon" width={30} height={30}/>
+            <IconHTML size={30}/>
             <p className="text-sm text-zinc-500">HTML5</p>
           </div>
           <div className="flex items-center space-x-2 p-2.5 pl-3.5 border border-zinc-800 rounded-full shadow">
-            <Image src="/svg/css3.svg" alt="css3 icon" width={30} height={30}/>
+            <IconCSS size={30}/>
             <p className="text-sm text-zinc-500">CSS3</p>
           </div>
           <div className="flex items-center space-x-2 p-2.5 pl-3.5 border border-zinc-800 rounded-full shadow">
-            <SiTypescript size={30} className="text-[#2f74c0]"/>
+            <IconTypescript size={30}/>
             <p className="text-sm text-zinc-500">Typescript</p>
           </div>
         </div>

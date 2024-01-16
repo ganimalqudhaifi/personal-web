@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
+
 import Layout from "../components/Layout";
 import Divider from '../components/Divider';
+import IconNextJS from "../components/icons/IconNextJs";
+import IconFirebase from "../components/icons/IconFirebase";
+import IconTailwindCSS from "../components/icons/IconTailwindCSS";
 
 export default function Projects() {
   return (
@@ -21,9 +24,9 @@ export default function Projects() {
             <Link href="https://financial-records.ganimalqudhaifi.my.id" target="_blank" className="inline-block my-3 text-zinc-300 hover:text-zinc-100 duration-300">Financial Records</Link>
             <p className="text-zinc-400 text-sm">A web application that can track financial transactions in real-time</p>
             <div className="flex space-x-2.5 mt-4 mb-2">
-              <SiNextdotjs size={25}/>
-              <SiTailwindcss size={25} className="text-[#38bdf8]"/>
-              <Image src="/svg/firebase.svg" alt="firebase icon" width={25} height={25}/>
+              <IconNextJS size={25}/>
+              <IconTailwindCSS size={25}/>
+              <IconFirebase size={25}/>
             </div>
           </div>
         </div>
