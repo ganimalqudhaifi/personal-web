@@ -6,12 +6,12 @@ import { PiCertificate, PiCodeBold } from 'react-icons/pi';
 import { SiJest, SiTailwindcss, SiNextdotjs, SiNodedotjs, SiTypescript } from 'react-icons/si'
 
 import Divider from "../components/Divider";
-import PrimaryLayout from "../components/PrimaryLayout";
+import Layout from "../components/Layout";
 import certificateLists from '../data/certificateLists.json';
 
 export default function Home() {
   return (
-    <PrimaryLayout activeIndex={0}>
+    <Layout activeIndex={0}>
       <div>
         <h2 className="mb-2 text-3xl font-extrabold">Hi, I&apos;m Alqi <span className="inline-block animate-wiggle">👋</span></h2>
         <ul className="mb-6 text-zinc-400 list-disc list-inside lg:flex lg:space-x-8">
@@ -65,7 +65,7 @@ export default function Home() {
             <p className="text-sm text-zinc-500">Node JS</p>
           </div>
           <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
-            <Image src="/logo/mongodb.png" alt="firebase icon" width={30} height={30}/>
+            <Image src="/logo/mongodb.png" alt="mongodb icon" width={30} height={30}/>
             <p className="text-sm text-zinc-500">Mongo DB</p>
           </div>
           <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
@@ -98,6 +98,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </PrimaryLayout>
+    </Layout>
   );
 }

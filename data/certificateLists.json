@@ -1,6 +1,12 @@
 [
   {
     "instance": "udemy",
+    "title": "Complete Next.js Developer: Zero to Mastery",
+    "date": "Dec 29, 2023",
+    "href": "https://www.udemy.com/certificate/UC-0476d5ff-42ab-48f8-981c-f3411c49d88b/"
+  },
+  {
+    "instance": "udemy",
     "title": "Testing React with Jest and React Testing Library",
     "date": "Feb 6, 2023",
     "href": "https://www.udemy.com/certificate/UC-4fef95b4-f7d5-4ee7-8180-a3033ab96352/"

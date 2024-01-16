@@ -1,12 +1,12 @@
 import { ReactNode, useState } from "react";
 import Sidebar from "./Sidebar";
 
-type PrimaryLayoutProps = {
+type LayoutProps = {
   children: ReactNode,
   activeIndex: number
 }
 
-export default function PrimaryLayout({ children, activeIndex }: PrimaryLayoutProps) {
+export default function Layout({ children, activeIndex }: LayoutProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   const handleMenuOpen = () => setIsOpen(!isOpen);

@@ -1,9 +1,9 @@
-import PrimaryLayout from "../components/PrimaryLayout";
+import Layout from "../components/Layout";
 import Divider from '../components/Divider';
 
 export default function About() {
   return (
-    <PrimaryLayout activeIndex={2}>
+    <Layout activeIndex={2}>
       <div>
         <h1 className="text-2xl font-bold mb-2">About</h1>
         <p className="text-zinc-400">A short story about me</p>
@@ -24,6 +24,6 @@ export default function About() {
           Sejauh ini, sebagai seorang pemrogram, saya sangat menikmati untuk mempelajari hal-hal baru, mencoba untuk menyelesaikan masalah yang kompleks, mencari solusi terbaik, dan berkeinginan kuat untuk dapat berkolaborasi dengan pemrogram lainnya.
         </p>
       </div>
-    </PrimaryLayout>
+    </Layout>
   )
 }

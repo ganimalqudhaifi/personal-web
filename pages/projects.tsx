@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
-import PrimaryLayout from "../components/PrimaryLayout";
+import Layout from "../components/Layout";
 import Divider from '../components/Divider';
 
 export default function Projects() {
   return (
-    <PrimaryLayout activeIndex={1}>
+    <Layout activeIndex={1}>
       <div>
         <h1 className="text-2xl font-bold mb-2">Projects</h1>
         <p className="text-zinc-400">Where Creativity Meets Code</p>
@@ -28,6 +28,6 @@ export default function Projects() {
           </div>
         </div>
       </div>
-    </PrimaryLayout>
+    </Layout>
   )
 }
