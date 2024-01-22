@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import Layout from "../components/Layout";
 import Divider from '../components/Divider';
-import IconNextJS from "../components/icons/IconNextJs";
+import IconNextJS from "../components/icons/IconNextJS";
 import IconFirebase from "../components/icons/IconFirebase";
 import IconTailwindCSS from "../components/icons/IconTailwindCSS";
 
