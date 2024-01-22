@@ -10,7 +10,7 @@ import Divider from "../components/Divider";
 import IconCSS from "../components/icons/IconCSS";
 import IconJest from "../components/icons/IconJest";
 import IconHTML from "../components/icons/IconHTML";
-import IconNextJS from "../components/icons/IconNextJs";
+import IconNextJS from "../components/icons/IconNextJS";
 import IconNodeJS from "../components/icons/IconNodeJS";
 import IconMongoDB from "../components/icons/IconMongoDB";
 import IconReactJS from "../components/icons/IconReactJS";
