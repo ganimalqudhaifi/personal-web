@@ -18,6 +18,7 @@ import IconFirebase from "../components/icons/IconFirebase";
 import IconTypescript from "../components/icons/IconTypeScript";
 import IconJavascript from "../components/icons/IconJavascript";
 import IconTailwindCSS from '../components/icons/IconTailwindCSS';
+import IconVueJS from "../components/icons/IconVueJS";
 
 export default function Home() {
   return (
@@ -69,6 +70,10 @@ export default function Home() {
           <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
             <IconNextJS size={30}/>
             <p className="text-sm text-zinc-500">Next JS</p>
+          </div>
+          <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
+            <IconVueJS size={30}/>
+            <p className="text-sm text-zinc-500">Vue JS</p>
           </div>
           <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">
             <IconNodeJS size={30}/>
