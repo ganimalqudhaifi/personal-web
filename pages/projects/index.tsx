@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import Layout from "../components/Layout";
-import Divider from '../components/Divider';
-import IconNextJS from "../components/icons/IconNextJS";
-import IconFirebase from "../components/icons/IconFirebase";
-import IconTailwindCSS from "../components/icons/IconTailwindCSS";
+import Layout from "../../components/Layout";
+import Divider from '../../components/Divider';
+import IconNextJS from "../../components/icons/IconNextJS";
+import IconFirebase from "../../components/icons/IconFirebase";
+import IconTailwindCSS from "../../components/icons/IconTailwindCSS";
 
 export default function Projects() {
   return (
@@ -18,7 +18,7 @@ export default function Projects() {
       <Divider />
 
       <div className="grid md:grid-cols-2">
-        <div className="bg-zinc-600/5 w-full rounded-xl overflow-hidden duration-300 hover:scale-[1.02]">
+        <Link href="/projects/financial-records" className="bg-zinc-600/5 w-full rounded-xl overflow-hidden duration-300 hover:scale-[1.02]">
           <Image alt="financial records project" src="/project-financial-records.png" width={400} height={400} className="w-full"/>
           <div className="p-4 border-2 border-t-0 border-zinc-800/50">
             <Link href="https://financial-records.ganimalqudhaifi.my.id" target="_blank" className="inline-block my-3 text-zinc-300 hover:text-zinc-100 duration-300">Financial Records</Link>
@@ -29,7 +29,7 @@ export default function Projects() {
               <IconFirebase size={25}/>
             </div>
           </div>
-        </div>
+        </Link>
       </div>
     </Layout>
   )

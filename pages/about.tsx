@@ -13,13 +13,17 @@ export default function About() {
 
       <div>
         <p className="text-zinc-300/90">
-          Pada pertengahan 2020, Saya merasakan dampak pandemi Covid-19 dalam dunia pendidikan. Saya sebagai mahasiswa baru terpaksa belajar secara online. Pada saat itu, metode belajar ini masih dalam tahap pengembangan dan terkadang jadwalnya menjadi berantakan.
+          Perjalanan saya ke dunia pemrograman dimulai dengan tidak lebih dari rasa ingin tahu yang iseng. Saat itu, saya sedang bermain-main dengan kode, hanya untuk melihat apa yang akan terjadi. Tanpa saya sadari, momen percobaan sembrono itu memicu semangat yang akan membentuk masa depan saya.
           <br/><br/>
-          Dengan rasa penasaran akan pengetahuan baru, saya mencoba belajar banyak hal baru melalui internet. Saya sangat suka menjelajahi situs, artikel, dan blog, dan mulai bertanya-tanya bagaimana cara membuatnya. Saya mulai bereksperimen dengan memodifikasi struktur dan gaya halaman web langsung dari browser menggunakan fitur inspect element. Ini adalah saat pertama saya mengenal pemrograman.
+          Anda tahu, saya selalu tertarik untuk belajar hal-hal baru. Ada sesuatu tentang sensasi menguasai keterampilan baru yang memotivasi saya. Dan pemrograman, nah, itu adalah taman bermain tak berujung yang menantang untuk ditaklukkan. Setiap baris kode menjadi teka-teki untuk dipecahkan, sebuah masalah untuk diatasi, dan saya merasa tidak bisa menahan diri untuk memecahkan teka-teki itu.
           <br/><br/>
-          Dari sana, saya mulai belajar pemrograman web, mulai dari cara pembuatan situs web statis, belajar dasar-dasar bahasa pemrograman, stateful logic, routing, progressive web apps, dan beberapa implementasi lainnya, hingga akhirnya bisa membangun situs web dinamis yang kompleks.
+          Pada awalnya, itu hanya hobi—proyek sampingan untuk mengisi waktu luang saya. Tetapi saat saya semakin mendalami dunia pemrograman, saya menyadari bahwa ini bukan sekadar kegemaran semata. Ini adalah panggilan. Semakin saya belajar, semakin saya haus akan pengetahuan. Saya menyerap tutorial, menelusuri dokumentasi, dan menghabiskan berjam-jam untuk bereksperimen dengan bahasa dan kerangka kerja yang berbeda.
           <br/><br/>
-          Inilah awal saya dalam dunia pemrograman. Pengalaman ini telah membuka jalan bagi saya untuk terus belajar dan berkembang di bidang IT. Meski awalnya hanya rasa penasaran, kini telah menjadi passion dan karir saya.
+          Dengan setiap keterampilan baru yang dikuasai, kepercayaan diri saya bertumbuh. Saya mulai menangani proyek-proyek yang lebih ambisius, mendorong batas-batas apa yang saya pikirkan mungkin dilakukan. Dan dengan setiap kesuksesan, semangat saya untuk pemrograman semakin berkobar.
+          <br/><br/>
+          Tetapi bukan hanya sensasi mengatasi tantangan yang membuat saya ketagihan. Ini adalah perasaan pemberdayaan yang datang bersamanya. Dengan tidak lebih dari keyboard dan pikiran kreatif, saya bisa mewujudkan ide-ide saya dengan cara yang tidak pernah saya bayangkan sebelumnya. Baik itu membangun situs web dari awal, mengotomatisasi tugas-tugas membosankan, atau menciptakan algoritma yang kompleks, kemungkinan tampak tak terbatas.
+          <br/><br/>
+          Dan begitulah, di sinilah saya sekarang—seorang pemrogram otodidak yang didorong oleh rasa ingin tahu yang tak kenal lelah dan nafsu belajar yang tak terpuaskan. Apa yang dimulai sebagai rasa ingin tahu sederhana telah berkembang menjadi sebuah hasrat yang tak terbendung, dan saya tidak bisa lebih bersyukur atas perjalanan yang membawa saya ke sini.
         </p>
       </div>
     </Layout>
