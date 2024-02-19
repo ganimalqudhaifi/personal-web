@@ -1,6 +1,12 @@
 [
   {
     "instance": "udemy",
+    "title": "Javascript: The Advanced Concepts",
+    "date": "Feb 19, 2024",
+    "href": "https://www.udemy.com/certificate/UC-d051420f-1a21-4451-bbf1-391a7e25e21a/"
+  },
+  {
+    "instance": "udemy",
     "title": "Complete Next.js Developer: Zero to Mastery",
     "date": "Dec 29, 2023",
     "href": "https://www.udemy.com/certificate/UC-0476d5ff-42ab-48f8-981c-f3411c49d88b/"
