@@ -42,6 +42,28 @@ export default function FinancialRecords() {
               <li><span className="text-zinc-300">Data Visualization</span><br/>Incorporated data visualization techniques to present financial data in an understandable and visually appealing manner, enabling users to gain insights into their budgeting patterns and trends.</li>
             </ul>
           </div>
+          <div>
+            <h2 className="text-3xl text-zinc-300 font-semibold mb-8">Tech Stack</h2>
+            <ul className="list-disc space-y-3 text-zinc-500 ml-5">
+              <li><span className="text-zinc-300">FrontEnd</span><br/>
+                <ul className="list-disc list-inside">
+                  <li>HTML, CSS, Javascript</li>
+                  <li>Next.js for building dynamic user interface</li>
+                  <li>Tailwind css for styling with utility class</li>
+                </ul>
+              </li>
+            </ul>
+            <ul className="list-disc space-y-3 text-zinc-500 ml-5">
+              <li><span className="text-zinc-300">Frontend</span><br/>
+                <ul className="list-disc list-inside">
+                  <li>HTML, CSS, Javascript</li>
+                  <li>Next.js for building dynamic user interface</li>
+                  <li>Tailwind css for styling with utility class</li>
+                  <li>Interactive motion design with framer motion</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
