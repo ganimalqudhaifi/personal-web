@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-
 import { BiLinkExternal } from 'react-icons/bi';
 import { PiCertificate, PiCodeBold } from 'react-icons/pi';
 
@@ -22,7 +21,7 @@ import IconVueJS from "../components/icons/IconVueJS";
 
 export default function Home() {
   return (
-    <Layout activeIndex={0}>
+    <Layout>
       <div>
         <h2 className="mb-2 text-3xl font-extrabold">Hi, I&apos;m Alqi <span className="inline-block animate-wiggle">👋</span></h2>
         <ul className="mb-6 text-zinc-400 list-disc list-inside lg:flex lg:space-x-8">
@@ -36,7 +35,10 @@ export default function Home() {
       <Divider/>
 
       <div>
-        <div className="flex items-center space-x-2 text-zinc-200"><PiCertificate size={24}/><h2 className="text-xl ">Certificates</h2></div>
+        <div className="flex items-center space-x-2 text-zinc-200">
+          <PiCertificate size={24}/>
+          <h2 className="text-xl">Certificates</h2>
+        </div>
         <p className="mt-2 mb-4 text-zinc-400">My Course Completion Certificates</p>
         <div className="space-y-4">
           {
@@ -60,7 +62,10 @@ export default function Home() {
       <Divider/>
 
       <div>
-        <div className="flex items-center space-x-2 text-zinc-200"><PiCodeBold size={24}/><h2 className="text-xl ">Skills</h2></div>
+        <div className="flex items-center space-x-2 text-zinc-200">
+          <PiCodeBold size={24}/>
+          <h2 className="text-xl ">Skills</h2>
+        </div>
         <p className="mt-2 mb-6 text-zinc-400">My Programing Skills</p>
         <div className="flex flex-wrap gap-2.5">
           <div className="flex items-center space-x-2 p-2.5 border border-zinc-800 rounded-full shadow">

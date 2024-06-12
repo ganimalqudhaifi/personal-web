@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import { GoHome } from 'react-icons/go'
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
@@ -30,11 +31,17 @@ const navLinks = [
 ]
 
 type SidebarProps = {
-  activeIndex: number,
   handleMenuOpen: () => void
 }
 
-export default function Sidebar({activeIndex, handleMenuOpen}: SidebarProps) {
+export default function Sidebar({handleMenuOpen}: SidebarProps) {
+  const router = useRouter();
+  const [activePage, setActivePage] = useState('');
+
+  useEffect(() => {
+    setActivePage(router.pathname)
+  }, [router.pathname])
+
   return (
     <div>
       <div className="p-4 relative flex justify-between items-center w-full bg-zinc-900 border-b border-zinc-800 md:p-6 lg:p-0 lg:border-0">
@@ -47,13 +54,13 @@ export default function Sidebar({activeIndex, handleMenuOpen}: SidebarProps) {
 
       <nav className="absolute top-full -translate-x-full w-64 h-[calc(100vh-73px)] md:h-[calc(100vh-89px)] p-4 bg-zinc-900/95 duration-300 sm:w-72 lg:relative lg:translate-x-0 lg:w-full  lg:p-0 lg:block group-[.is-open]:block group-[.is-open]:translate-x-0 z-50">
         <div className="flex flex-col justify-between h-full lg:h-0">
-          {/* pages-router */}
+          {/* navigation-page */}
           <ul className="space-y-1 lg:order-last">
             {
               navLinks.map((link, i) => (
-                  <li key={i}>
+                <li key={i}>
                   <Link href={link.href}>
-                    <div className={`${activeIndex === i && 'bg-zinc-800'} flex items-center space-x-2 p-2 text-gray-300 rounded duration-300 hover:bg-zinc-800 hover:scale-105`}>
+                    <div className={`${activePage === link.href && 'bg-zinc-800'} flex items-center space-x-2 p-2 text-gray-300 rounded duration-300 hover:bg-zinc-800 hover:scale-105`}>
                       <link.Icon size={24}/>
                       <p>{link.text}</p>
                     </div>

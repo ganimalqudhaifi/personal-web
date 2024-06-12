@@ -3,7 +3,7 @@ import Divider from '../components/Divider';
 
 export default function About() {
   return (
-    <Layout activeIndex={2}>
+    <Layout>
       <div>
         <h1 className="text-2xl font-bold mb-2">About</h1>
         <p className="text-zinc-400">A short story about me</p>

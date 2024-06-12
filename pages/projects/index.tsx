@@ -9,7 +9,7 @@ import IconTailwindCSS from "../../components/icons/IconTailwindCSS";
 
 export default function Projects() {
   return (
-    <Layout activeIndex={1}>
+    <Layout>
       <div>
         <h1 className="text-2xl font-bold mb-2">Projects</h1>
         <p className="text-zinc-400">Where Creativity Meets Code</p>

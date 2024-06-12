@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import { PiBookBookmark, PiChalkboard, PiLinkSimple } from "react-icons/pi";
 
 import Divider from "../components/Divider";
@@ -10,7 +9,7 @@ import courseListReference from '../data/courseListReference.json';
 
 export default function References() {
   return (
-    <Layout activeIndex={3}>
+    <Layout>
       <div>
         <h1 className="text-2xl font-bold mb-2">References</h1>
         <p className="text-zinc-400">Recomendation of discovered source that I used</p>
