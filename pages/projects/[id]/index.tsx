@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { HiExternalLink } from "react-icons/hi";
 import { useRouter } from "next/router";
-import projectList from "@/data/projectList";
+import projectList from "@/data/ProjectList";
 
 export default function FinancialRecords() {
   const router = useRouter();

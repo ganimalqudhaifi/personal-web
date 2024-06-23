@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import projectList from "./data/projectList";
+import projectList from "./data/ProjectList";
 
 export function middleware(request: NextRequest) {
   if (request.nextUrl.pathname.startsWith("/projects")) {
