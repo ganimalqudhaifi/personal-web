@@ -1,7 +1,8 @@
-import { IconProps } from "@/types";
-import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import React from "react";
+
+import { IconProps } from "@/types";
 
 export default function ProjectCard({
   imagePath,
@@ -20,18 +21,18 @@ export default function ProjectCard({
 
   return (
     <div
-      className="bg-zinc-600/5 w-full rounded-xl overflow-hidden duration-300 hover:scale-[1.02] cursor-pointer"
+      className="w-full cursor-pointer overflow-hidden rounded-xl bg-zinc-600/5 duration-300 hover:scale-[1.02]"
       onClick={() => router.push(link)}
     >
-      <div className="relative w-full h-48">
+      <div className="relative h-48 w-full">
         <Image src={imagePath} alt={title} fill={true} className="w-full" />
       </div>
-      <div className="p-4 border-2 border-t-0 border-zinc-800/50">
-        <h2 className="inline-block my-3 text-zinc-300 hover:text-[#29fd53] duration-300">
+      <div className="border-2 border-t-0 border-zinc-800/50 p-4">
+        <h2 className="my-3 inline-block text-zinc-300 duration-300 hover:text-[#29fd53]">
           {title}
         </h2>
-        <p className="text-zinc-400 text-sm">{description}</p>
-        <div className="flex space-x-2.5 mt-4 mb-2">
+        <p className="text-sm text-zinc-400">{description}</p>
+        <div className="mt-4 mb-2 flex space-x-2.5">
           {techStack.map((TechIcon, index) => (
             <TechIcon key={index} size={25} />
           ))}

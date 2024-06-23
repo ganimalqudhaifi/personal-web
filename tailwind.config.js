@@ -11,16 +11,16 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        wiggle: 'wiggle 2s ease-in-out infinite',
+        wiggle: "wiggle 2s ease-in-out infinite",
       },
       keyframes: {
         wiggle: {
-          '0%, 80%': { transform: 'rotate(0deg)' },
-          '15%, 45%': { transform: 'rotate(8deg)' },
-          '30%, 60%': { transform: 'rotate(-6deg)' },
-        }
-      }
+          "0%, 80%": { transform: "rotate(0deg)" },
+          "15%, 45%": { transform: "rotate(8deg)" },
+          "30%, 60%": { transform: "rotate(-6deg)" },
+        },
+      },
     },
   },
   plugins: [],
-}
+};

@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import Divider from "@/components/Divider";
-import { FaGithub } from "react-icons/fa";
-import { IoMdArrowRoundBack } from "react-icons/io";
-import { HiExternalLink } from "react-icons/hi";
 import { useRouter } from "next/router";
+import { FaGithub } from "react-icons/fa";
+import { HiExternalLink } from "react-icons/hi";
+import { IoMdArrowRoundBack } from "react-icons/io";
+
+import Divider from "@/components/Divider";
 import projectList from "@/data/ProjectList";
 
 export default function FinancialRecords() {
@@ -17,18 +18,18 @@ export default function FinancialRecords() {
   }
 
   return (
-    <div className="w-full min-h-screen bg-zinc-900">
+    <div className="min-h-screen w-full bg-zinc-900">
       <div className="flex justify-center lg:pt-10">
-        <div className="w-full max-w-4xl text-white p-6 space-y-6">
+        <div className="w-full max-w-4xl space-y-6 p-6 text-white">
           <Link
             href="/projects"
-            className="flex items-center gap-2 text-zinc-300 hover:gap-2.5 hover:text-zinc-200 duration-300"
+            className="flex items-center gap-2 text-zinc-300 duration-300 hover:gap-2.5 hover:text-zinc-200"
           >
             <IoMdArrowRoundBack />
             <span>Back to Projects</span>
           </Link>
           <div>
-            <h2 className="text-4xl font-semibold mb-1">
+            <h2 className="mb-1 text-4xl font-semibold">
               {currentProject.title}
             </h2>
             <p className="text-zinc-400">{currentProject.description}</p>
@@ -68,11 +69,11 @@ export default function FinancialRecords() {
           />
           {currentProject.sections.introduction && (
             <div className="py-8">
-              <h2 className="text-3xl text-zinc-300 font-semibold mb-8">
+              <h2 className="mb-8 text-3xl font-semibold text-zinc-300">
                 Introduction
               </h2>
               {currentProject.sections.introduction.map((item, index) => (
-                <p key={index} className="text-zinc-400 indent-12">
+                <p key={index} className="indent-12 text-zinc-400">
                   {item}
                 </p>
               ))}
@@ -80,10 +81,10 @@ export default function FinancialRecords() {
           )}
           {currentProject.sections.keyFeatures && (
             <div>
-              <h2 className="text-3xl text-zinc-300 font-semibold mb-8">
+              <h2 className="mb-8 text-3xl font-semibold text-zinc-300">
                 Key Features
               </h2>
-              <ul className="list-disc space-y-3 text-zinc-500 ml-5">
+              <ul className="ml-5 list-disc space-y-3 text-zinc-500">
                 {currentProject.sections.keyFeatures.map((item, index) => (
                   <li key={index}>
                     <span className="text-zinc-300">{item}</span>

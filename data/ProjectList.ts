@@ -1,5 +1,5 @@
-import IconNextJS from "@/components/icons/IconNextJS";
 import IconFirebase from "@/components/icons/IconFirebase";
+import IconNextJS from "@/components/icons/IconNextJS";
 import IconTailwindCSS from "@/components/icons/IconTailwindCSS";
 
 const projectList = [

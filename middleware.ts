@@ -1,6 +1,6 @@
+import projectList from "./data/ProjectList";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import projectList from "./data/ProjectList";
 
 export function middleware(request: NextRequest) {
   if (request.nextUrl.pathname.startsWith("/projects")) {
@@ -12,7 +12,7 @@ export function middleware(request: NextRequest) {
       const projectId = segments[2];
 
       const currentProject = projectList.find(
-        (project) => project.id === projectId
+        (project) => project.id === projectId,
       );
       if (!currentProject) {
         return NextResponse.redirect(new URL("/projects", request.url));

@@ -1,87 +1,117 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { GoHome } from 'react-icons/go'
+import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { GoHome } from "react-icons/go";
+import {
+  PiSelectionBackground,
+  PiNewspaperClipping,
+  PiBrowsersLight,
+} from "react-icons/pi";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
-import { PiSelectionBackground, PiNewspaperClipping, PiBrowsersLight } from 'react-icons/pi'
 
 const navLinks = [
   {
     text: "Home",
     href: "/",
-    Icon: GoHome
+    Icon: GoHome,
   },
   {
     text: "Projects",
     href: "/projects",
-    Icon: PiBrowsersLight
+    Icon: PiBrowsersLight,
   },
   {
     text: "About",
     href: "/about",
-    Icon: PiNewspaperClipping
+    Icon: PiNewspaperClipping,
   },
   {
     text: "References",
     href: "/references",
-    Icon: PiSelectionBackground
+    Icon: PiSelectionBackground,
   },
-]
+];
 
 type SidebarProps = {
-  handleMenuOpen: () => void
-}
+  handleMenuOpen: () => void;
+};
 
-export default function Sidebar({handleMenuOpen}: SidebarProps) {
+export default function Sidebar({ handleMenuOpen }: SidebarProps) {
   const router = useRouter();
-  const [activePage, setActivePage] = useState('');
+  const [activePage, setActivePage] = useState("");
 
   useEffect(() => {
-    setActivePage(router.pathname)
-  }, [router.pathname])
+    setActivePage(router.pathname);
+  }, [router.pathname]);
 
   return (
     <div>
-      <div className="p-4 relative flex justify-between items-center w-full bg-zinc-900 border-b border-zinc-800 md:p-6 lg:p-0 lg:border-0">
+      <div className="relative flex w-full items-center justify-between border-b border-zinc-800 bg-zinc-900 p-4 md:p-6 lg:border-0 lg:p-0">
         <div className="flex items-center space-x-3 lg:flex-col lg:space-y-3 lg:space-x-0">
-          <Image alt="profile picture" src="/profile-picture.jpg" width={100} height={100} className="w-10 lg:w-28 rounded-full" priority/>
-          <p className="font-semibold tracking-wide text-lg lg:text-xl text-gray-100">Ganim Alqudhaifi</p>
+          <Image
+            alt="profile picture"
+            src="/profile-picture.jpg"
+            width={100}
+            height={100}
+            className="w-10 rounded-full lg:w-28"
+            priority
+          />
+          <p className="text-lg font-semibold tracking-wide text-gray-100 lg:text-xl">
+            Ganim Alqudhaifi
+          </p>
         </div>
-        <button className="p-1 text-white border rounded lg:hidden" onClick={handleMenuOpen}><RxHamburgerMenu/></button>
+        <button
+          className="rounded border p-1 text-white lg:hidden"
+          onClick={handleMenuOpen}
+        >
+          <RxHamburgerMenu />
+        </button>
       </div>
 
-      <nav className="absolute top-full -translate-x-full w-64 h-[calc(100vh-73px)] md:h-[calc(100vh-89px)] p-4 bg-zinc-900/95 duration-300 sm:w-72 lg:relative lg:translate-x-0 lg:w-full  lg:p-0 lg:block group-[.is-open]:block group-[.is-open]:translate-x-0 z-50">
-        <div className="flex flex-col justify-between h-full lg:h-0">
+      <nav className="absolute top-full z-50 h-[calc(100vh-73px)] w-64 -translate-x-full bg-zinc-900/95 p-4 duration-300 group-[.is-open]:block group-[.is-open]:translate-x-0 sm:w-72 md:h-[calc(100vh-89px)] lg:relative lg:block lg:w-full lg:translate-x-0 lg:p-0">
+        <div className="flex h-full flex-col justify-between lg:h-0">
           {/* navigation-page */}
           <ul className="space-y-1 lg:order-last">
-            {
-              navLinks.map((link, i) => (
-                <li key={i}>
-                  <Link href={link.href}>
-                    <div className={`${activePage === link.href && 'bg-zinc-800'} flex items-center space-x-2 p-2 text-gray-300 rounded duration-300 hover:bg-zinc-800 hover:scale-105`}>
-                      <link.Icon size={24}/>
-                      <p>{link.text}</p>
-                    </div>
-                  </Link>
-                </li>
-              ))
-            }
+            {navLinks.map((link, i) => (
+              <li key={i}>
+                <Link href={link.href}>
+                  <div
+                    className={`${activePage === link.href && "bg-zinc-800"} flex items-center space-x-2 rounded p-2 text-gray-300 duration-300 hover:scale-105 hover:bg-zinc-800`}
+                  >
+                    <link.Icon size={24} />
+                    <p>{link.text}</p>
+                  </div>
+                </Link>
+              </li>
+            ))}
           </ul>
 
           {/* divider */}
-          <div className="hidden w-full my-5 border-t border-zinc-500 lg:block"/>
+          <div className="my-5 hidden w-full border-t border-zinc-500 lg:block" />
 
           {/* social-media */}
-          <div className="flex justify-evenly space-x-3 mt-2 text-zinc-400 lg:order-first lg:justify-center">
-            <Link href="https://www.linkedin.com/in/andi-muhammad-ganim-alqudhaifi" target="_blank" className="duration-300 hover:text-zinc-300">
+          <div className="mt-2 flex justify-evenly space-x-3 text-zinc-400 lg:order-first lg:justify-center">
+            <Link
+              href="https://www.linkedin.com/in/andi-muhammad-ganim-alqudhaifi"
+              target="_blank"
+              className="duration-300 hover:text-zinc-300"
+            >
               <FaLinkedin size={19} />
             </Link>
-            <Link href="https://github.com/ganimalqudhaifi" target="_blank" className="duration-300 hover:text-zinc-300">
+            <Link
+              href="https://github.com/ganimalqudhaifi"
+              target="_blank"
+              className="duration-300 hover:text-zinc-300"
+            >
               <FaGithub size={19} />
             </Link>
-            <Link href="https://www.instagram.com/ganimalqudhaifi" target="_blank" className="duration-300 hover:text-zinc-300">
+            <Link
+              href="https://www.instagram.com/ganimalqudhaifi"
+              target="_blank"
+              className="duration-300 hover:text-zinc-300"
+            >
               <FaInstagram size={19} />
             </Link>
           </div>
