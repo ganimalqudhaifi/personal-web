@@ -1,23 +1,21 @@
 import { IconProps } from "@/types";
+import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React from "react";
-
-interface ProjectCardProps {
-  image: string;
-  title: string;
-  techStack: React.ComponentType<IconProps>[];
-  description: string;
-  link: string;
-}
 
 export default function ProjectCard({
-  image,
+  imagePath,
   title,
   techStack,
   description,
   link,
-}: ProjectCardProps) {
+}: {
+  imagePath: string;
+  title: string;
+  techStack: React.ComponentType<IconProps>[];
+  description: string;
+  link: string;
+}) {
   const router = useRouter();
 
   return (
@@ -26,7 +24,7 @@ export default function ProjectCard({
       onClick={() => router.push(link)}
     >
       <div className="relative w-full h-48">
-        <Image src={image} alt={title} fill={true} className="w-full" />
+        <Image src={imagePath} alt={title} fill={true} className="w-full" />
       </div>
       <div className="p-4 border-2 border-t-0 border-zinc-800/50">
         <h2 className="inline-block my-3 text-zinc-300 hover:text-[#29fd53] duration-300">
