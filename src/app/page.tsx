@@ -7,12 +7,18 @@ import Divider from "@/components/Divider";
 import Layout from "@/components/Layout";
 import IconCSS from "@/components/icons/IconCSS";
 import IconFirebase from "@/components/icons/IconFirebase";
+import IconGraphQL from "@/components/icons/IconGraphQL";
 import IconHTML from "@/components/icons/IconHTML";
+import IconHasura from "@/components/icons/IconHasura";
 import IconJavascript from "@/components/icons/IconJavascript";
 import IconJest from "@/components/icons/IconJest";
+import IconLangchain from "@/components/icons/IconLangchain";
 import IconMongoDB from "@/components/icons/IconMongoDB";
 import IconNextJS from "@/components/icons/IconNextJS";
 import IconNodeJS from "@/components/icons/IconNodeJS";
+import IconNotion from "@/components/icons/IconNotion";
+import IconOpenAI from "@/components/icons/IconOpenAI";
+import IconPostgreSQL from "@/components/icons/IconPostgreSQL";
 import IconReactJS from "@/components/icons/IconReactJS";
 import IconTailwindCSS from "@/components/icons/IconTailwindCSS";
 import IconTypescript from "@/components/icons/IconTypeScript";
@@ -144,6 +150,30 @@ export default function Home() {
           <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 pl-3.5 shadow">
             <IconTypescript size={30} />
             <p className="text-sm text-zinc-500">Typescript</p>
+          </div>
+          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 pl-3.5 shadow">
+            <IconLangchain size={30} />
+            <p className="text-sm text-zinc-500">Langchain</p>
+          </div>
+          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 pl-3.5 shadow">
+            <IconOpenAI size={30} />
+            <p className="text-sm text-zinc-500">OpenAI</p>
+          </div>
+          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 pl-3.5 shadow">
+            <IconNotion size={30} />
+            <p className="text-sm text-zinc-500">Notion</p>
+          </div>
+          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 pl-3.5 shadow">
+            <IconHasura size={30} />
+            <p className="text-sm text-zinc-500">Hasura</p>
+          </div>
+          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 pl-3.5 shadow">
+            <IconGraphQL size={30} />
+            <p className="text-sm text-zinc-500">GraphQL</p>
+          </div>
+          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 pl-3.5 shadow">
+            <IconPostgreSQL size={30} />
+            <p className="text-sm text-zinc-500">PostgreSQL</p>
           </div>
         </div>
       </div>

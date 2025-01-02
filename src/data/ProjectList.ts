@@ -1,8 +1,22 @@
 import IconFirebase from "@/components/icons/IconFirebase";
+import IconLangchain from "@/components/icons/IconLangchain";
+import IconMongoDB from "@/components/icons/IconMongoDB";
 import IconNextJS from "@/components/icons/IconNextJS";
+import IconNotion from "@/components/icons/IconNotion";
 import IconTailwindCSS from "@/components/icons/IconTailwindCSS";
 
 const projectList = [
+  {
+    id: "synth-ai",
+    title: "Synth AI",
+    link: "/projects/synth-ai",
+    githubLink: "https://github.com/ganimalqudhaifi/synth-ai",
+    demoLink: "https://synth-ai.ganimalqudhaifi.my.id",
+    imagePath: "/project-synth-ai.png",
+    description:
+      "AI-powered platform that integrates multiple functionalities",
+    techStack: [IconNextJS, IconLangchain, IconMongoDB, IconNotion],
+  },
   {
     id: "financial-records",
     title: "Financial Records",
