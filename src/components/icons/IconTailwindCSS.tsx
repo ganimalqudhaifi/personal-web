@@ -1,3 +1,5 @@
+"use client";
+
 import { SiTailwindcss } from "react-icons/si";
 
 import { IconProps } from "@/types";

@@ -1,6 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useParams } from "next/navigation";
 import { FaGithub } from "react-icons/fa";
 import { HiExternalLink } from "react-icons/hi";
 import { IoMdArrowRoundBack } from "react-icons/io";
@@ -11,9 +13,10 @@ import projectList from "@/data/ProjectList";
 import MarkdownDiscoverVideos from "@/markdown/discover-videos.mdx";
 import MarkdownFinancialRecords from "@/markdown/financial-records.mdx";
 
-export default function FinancialRecords() {
-  const router = useRouter();
-  const id = router.query.id;
+export default function FinancialRecords({}) {
+  const params = useParams();
+  const id = params.id;
+
   const currentProject = projectList.find((project) => project.id === id);
 
   if (!currentProject) {

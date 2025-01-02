@@ -1,12 +1,14 @@
+"use client";
+
 import Image from "next/image";
 
 import { IconProps } from "@/types";
 
-export default function IconJavascript({ size }: IconProps) {
+export default function IconReactJS({ size }: IconProps) {
   return (
     <Image
-      src="/svg/javascript.svg"
-      alt="javascript icon"
+      src="/svg/reactjs.svg"
+      alt="reactjs icon"
       width={size}
       height={size}
     />

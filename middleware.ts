@@ -1,4 +1,4 @@
-import projectList from "./data/ProjectList";
+import projectList from "@/data/ProjectList";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 

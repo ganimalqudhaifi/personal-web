@@ -1,13 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { GoHome } from "react-icons/go";
 import {
-  PiSelectionBackground,
-  PiNewspaperClipping,
   PiBrowsersLight,
+  PiNewspaperClipping,
+  PiSelectionBackground,
 } from "react-icons/pi";
 import { RxHamburgerMenu } from "react-icons/rx";
 
@@ -39,12 +41,12 @@ type SidebarProps = {
 };
 
 export default function Sidebar({ handleMenuOpen }: SidebarProps) {
-  const router = useRouter();
+  const pathname = usePathname();
   const [activePage, setActivePage] = useState("");
 
   useEffect(() => {
-    setActivePage(router.pathname);
-  }, [router.pathname]);
+    setActivePage(pathname);
+  }, [pathname]);
 
   return (
     <div>

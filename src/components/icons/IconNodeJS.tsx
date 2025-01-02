@@ -1,3 +1,5 @@
+"use client";
+
 import { SiNodedotjs } from "react-icons/si";
 
 import { IconProps } from "@/types";

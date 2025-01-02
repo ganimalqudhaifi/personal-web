@@ -1,12 +1,14 @@
+"use client";
+
 import Image from "next/image";
 
 import { IconProps } from "@/types";
 
-export default function IconMongoDB({ size }: IconProps) {
+export default function IconJavascript({ size }: IconProps) {
   return (
     <Image
-      src="/logo/mongodb.png"
-      alt="mongodb icon"
+      src="/svg/javascript.svg"
+      alt="javascript icon"
       width={size}
       height={size}
     />

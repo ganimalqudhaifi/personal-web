@@ -1,3 +1,5 @@
+"use client";
+
 import { SiTypescript } from "react-icons/si";
 
 import { IconProps } from "@/types";
