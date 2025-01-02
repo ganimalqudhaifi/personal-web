@@ -8,7 +8,6 @@ export function middleware(request: NextRequest) {
     const segments = pathname.split("/");
 
     if (segments.length === 3 && segments[1] === "projects") {
-      console.log({ segments });
       const projectId = segments[2];
 
       const currentProject = projectList.find(

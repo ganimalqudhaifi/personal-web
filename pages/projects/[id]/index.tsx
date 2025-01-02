@@ -6,7 +6,10 @@ import { HiExternalLink } from "react-icons/hi";
 import { IoMdArrowRoundBack } from "react-icons/io";
 
 import Divider from "@/components/Divider";
+import MdxLayout from "@/components/mdx-layout";
 import projectList from "@/data/ProjectList";
+import MarkdownDiscoverVideos from "@/markdown/discover-videos.mdx";
+import MarkdownFinancialRecords from "@/markdown/financial-records.mdx";
 
 export default function FinancialRecords() {
   const router = useRouter();
@@ -67,32 +70,13 @@ export default function FinancialRecords() {
             height={1000}
             className="w-full rounded"
           />
-          {currentProject.sections.introduction && (
-            <div className="py-8">
-              <h2 className="mb-8 text-3xl font-semibold text-zinc-300">
-                Introduction
-              </h2>
-              {currentProject.sections.introduction.map((item, index) => (
-                <p key={index} className="indent-12 text-zinc-400">
-                  {item}
-                </p>
-              ))}
-            </div>
-          )}
-          {currentProject.sections.keyFeatures && (
-            <div>
-              <h2 className="mb-8 text-3xl font-semibold text-zinc-300">
-                Key Features
-              </h2>
-              <ul className="ml-5 list-disc space-y-3 text-zinc-500">
-                {currentProject.sections.keyFeatures.map((item, index) => (
-                  <li key={index}>
-                    <span className="text-zinc-300">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+          <MdxLayout>
+            {id === "financial-records" ? (
+              <MarkdownFinancialRecords />
+            ) : id === "discover-videos" ? (
+              <MarkdownDiscoverVideos />
+            ) : null}
+          </MdxLayout>
         </div>
       </div>
     </div>
