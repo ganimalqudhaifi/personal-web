@@ -12,6 +12,7 @@ import MdxLayout from "@/components/mdx-layout";
 import projectList from "@/data/ProjectList";
 import MarkdownDiscoverVideos from "@/markdown/discover-videos.mdx";
 import MarkdownFinancialRecords from "@/markdown/financial-records.mdx";
+import MarkdownSytnAI from "@/markdown/synth-ai.mdx";
 
 export default function FinancialRecords({}) {
   const params = useParams();
@@ -78,6 +79,8 @@ export default function FinancialRecords({}) {
               <MarkdownFinancialRecords />
             ) : id === "discover-videos" ? (
               <MarkdownDiscoverVideos />
+            ) : id === "synth-ai" ? (
+              <MarkdownSytnAI />
             ) : null}
           </MdxLayout>
         </div>
