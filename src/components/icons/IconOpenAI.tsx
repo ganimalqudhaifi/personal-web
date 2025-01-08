@@ -1,8 +1,11 @@
 "use client";
 
+import Image from "next/image";
+
 import { IconProps } from "@/types";
-import { OpenAI } from "@lobehub/icons";
 
 export default function IconOpenAI({ size }: IconProps) {
-  return <OpenAI.Avatar size={size} />;
+  return (
+    <Image src="/svg/openai.svg" alt="openai icon" width={size} height={size} />
+  );
 }

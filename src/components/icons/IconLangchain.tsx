@@ -1,8 +1,16 @@
 "use client";
 
+import Image from "next/image";
+
 import { IconProps } from "@/types";
-import { LangChain } from "@lobehub/icons";
 
 export default function IconLangchain({ size }: IconProps) {
-  return <LangChain.Avatar size={size} />;
+  return (
+    <Image
+      src="/svg/langchain.svg"
+      alt="langchain icon"
+      width={size}
+      height={size}
+    />
+  );
 }
