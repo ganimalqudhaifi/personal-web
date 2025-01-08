@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 import { BiLinkExternal } from "react-icons/bi";
 import { PiCertificate, PiCodeBold } from "react-icons/pi";
 
@@ -24,6 +25,73 @@ import IconTailwindCSS from "@/components/icons/IconTailwindCSS";
 import IconTypescript from "@/components/icons/IconTypeScript";
 import IconVueJS from "@/components/icons/IconVueJS";
 import certificateLists from "@/data/certificateLists.json";
+import type { IconProps } from "@/types";
+
+type Certificate = {
+  instance: string;
+  title: string;
+  date: string;
+  href: string;
+};
+
+const skills = [
+  { Icon: IconReactJS, name: "React JS" },
+  { Icon: IconNextJS, name: "Next JS" },
+  { Icon: IconVueJS, name: "Vue JS" },
+  { Icon: IconNodeJS, name: "Node JS" },
+  { Icon: IconMongoDB, name: "Mongo DB" },
+  { Icon: IconTailwindCSS, name: "Tailwind CSS" },
+  { Icon: IconJest, name: "Jest" },
+  { Icon: IconFirebase, name: "Firebase" },
+  { Icon: IconJavascript, name: "Javascript" },
+  { Icon: IconHTML, name: "HTML5" },
+  { Icon: IconCSS, name: "CSS3" },
+  { Icon: IconTypescript, name: "Typescript" },
+  { Icon: IconLangchain, name: "Langchain" },
+  { Icon: IconOpenAI, name: "OpenAI" },
+  { Icon: IconNotion, name: "Notion" },
+  { Icon: IconHasura, name: "Hasura" },
+  { Icon: IconGraphQL, name: "GraphQL" },
+  { Icon: IconPostgreSQL, name: "PostgreSQL" },
+];
+
+const CertificateCard = ({ certificate }: { certificate: Certificate }) => (
+  <div className="group/certificate relative flex cursor-pointer items-center justify-between rounded border border-zinc-800/60 bg-zinc-600/5 p-2 subpixel-antialiased shadow duration-200 before:absolute before:inset-y-0 before:right-0 before:w-32 before:from-transparent before:via-zinc-900/80 before:to-zinc-900 before:content-[''] hover:scale-[1.02] hover:border-zinc-700/50 before:hover:bg-gradient-to-r">
+    <div className="flex items-center space-x-3">
+      <Image
+        alt={`${certificate.instance} logo`}
+        src={`/logo/${certificate.instance}.png`}
+        width={64}
+        height={64}
+        className="w-16 rounded shadow"
+        priority
+      />
+      <div>
+        <p className="text-sm capitalize text-indigo-300">
+          {certificate.instance}
+        </p>
+        <p className="mb-0.5 text-zinc-400">{certificate.title}</p>
+        <p className="text-sm text-zinc-500">{certificate.date}</p>
+      </div>
+    </div>
+    <Link href={certificate.href} target="_blank">
+      <BiLinkExternal className="absolute right-0 top-1/2 mr-4 hidden h-6 w-6 -translate-y-1/2 text-zinc-600 duration-300 hover:scale-110 hover:text-zinc-400 group-hover/certificate:block" />
+    </Link>
+  </div>
+);
+
+const SkillCard = ({
+  Icon,
+  skill,
+}: {
+  Icon: React.ComponentType<IconProps>;
+  skill: string;
+}) => (
+  <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 pl-3.5 shadow">
+    <Icon size={30} />
+    <p className="text-sm text-zinc-500">{skill}</p>
+  </div>
+);
 
 export default function Home() {
   return (
@@ -65,31 +133,7 @@ export default function Home() {
         </p>
         <div className="space-y-4">
           {certificateLists.map((certificate, i) => (
-            <div
-              key={i}
-              className="group/certificate relative flex cursor-pointer items-center justify-between rounded border border-zinc-800/60 bg-zinc-600/5 p-2 subpixel-antialiased shadow duration-200 before:absolute before:inset-y-0 before:right-0 before:w-32 before:from-transparent before:via-zinc-900/80 before:to-zinc-900 before:content-[''] hover:scale-[1.02] hover:border-zinc-700/50 before:hover:bg-gradient-to-r"
-            >
-              <div className="flex items-center space-x-3">
-                <Image
-                  alt={`${certificate.instance} logo`}
-                  src={`/logo/${certificate.instance}.png`}
-                  width={64}
-                  height={64}
-                  className="w-16 rounded shadow"
-                  priority
-                />
-                <div className="">
-                  <p className="text-sm capitalize text-indigo-300">
-                    {certificate.instance}
-                  </p>
-                  <p className="mb-0.5 text-zinc-400">{certificate.title}</p>
-                  <p className="text-sm text-zinc-500">{certificate.date}</p>
-                </div>
-              </div>
-              <Link href={certificate.href} target="_blank">
-                <BiLinkExternal className="absolute right-0 top-1/2 mr-4 hidden h-6 w-6 -translate-y-1/2 text-zinc-600 duration-300 hover:scale-110 hover:text-zinc-400 group-hover/certificate:block" />
-              </Link>
-            </div>
+            <CertificateCard certificate={certificate} key={i} />
           ))}
         </div>
       </div>
@@ -103,78 +147,9 @@ export default function Home() {
         </div>
         <p className="mt-2 mb-6 text-zinc-400">My Programing Skills</p>
         <div className="flex flex-wrap gap-2.5">
-          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 shadow">
-            <IconReactJS size={30} />
-            <p className="text-sm text-zinc-500">React JS</p>
-          </div>
-          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 shadow">
-            <IconNextJS size={30} />
-            <p className="text-sm text-zinc-500">Next JS</p>
-          </div>
-          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 shadow">
-            <IconVueJS size={30} />
-            <p className="text-sm text-zinc-500">Vue JS</p>
-          </div>
-          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 shadow">
-            <IconNodeJS size={30} />
-            <p className="text-sm text-zinc-500">Node JS</p>
-          </div>
-          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 shadow">
-            <IconMongoDB size={30} />
-            <p className="text-sm text-zinc-500">Mongo DB</p>
-          </div>
-          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 shadow">
-            <IconTailwindCSS size={30} />
-            <p className="text-sm text-zinc-500">Tailwind CSS</p>
-          </div>
-          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 shadow">
-            <IconJest size={30} />
-            <p className="text-sm text-zinc-500">Jest</p>
-          </div>
-          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 shadow">
-            <IconFirebase size={30} />
-            <p className="text-sm text-zinc-500">Firebase</p>
-          </div>
-          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 pl-3.5 shadow">
-            <IconJavascript size={30} />
-            <p className="text-sm text-zinc-500">Javascript</p>
-          </div>
-          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 pl-3.5 shadow">
-            <IconHTML size={30} />
-            <p className="text-sm text-zinc-500">HTML5</p>
-          </div>
-          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 pl-3.5 shadow">
-            <IconCSS size={30} />
-            <p className="text-sm text-zinc-500">CSS3</p>
-          </div>
-          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 pl-3.5 shadow">
-            <IconTypescript size={30} />
-            <p className="text-sm text-zinc-500">Typescript</p>
-          </div>
-          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 pl-3.5 shadow">
-            <IconLangchain size={30} />
-            <p className="text-sm text-zinc-500">Langchain</p>
-          </div>
-          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 pl-3.5 shadow">
-            <IconOpenAI size={30} />
-            <p className="text-sm text-zinc-500">OpenAI</p>
-          </div>
-          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 pl-3.5 shadow">
-            <IconNotion size={30} />
-            <p className="text-sm text-zinc-500">Notion</p>
-          </div>
-          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 pl-3.5 shadow">
-            <IconHasura size={30} />
-            <p className="text-sm text-zinc-500">Hasura</p>
-          </div>
-          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 pl-3.5 shadow">
-            <IconGraphQL size={30} />
-            <p className="text-sm text-zinc-500">GraphQL</p>
-          </div>
-          <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 pl-3.5 shadow">
-            <IconPostgreSQL size={30} />
-            <p className="text-sm text-zinc-500">PostgreSQL</p>
-          </div>
+          {skills.map((skill, i) => (
+            <SkillCard key={i} Icon={skill.Icon} skill={skill.name} />
+          ))}
         </div>
       </div>
     </Layout>
