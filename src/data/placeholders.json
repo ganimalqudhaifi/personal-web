@@ -1,0 +1,42 @@
+{
+  "profile-picture.jpg": {
+    "width": 16,
+    "height": 16,
+    "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoQABAABUB8JQBOgBTfQbpYAADiDLlbmlopMazmOsmIY6e14kqmxfXin4Fxtpo5PXneTUf8Ktxm/IMsAAA="
+  },
+  "project-discover-videos.png": {
+    "width": 16,
+    "height": 9,
+    "blurDataURL": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADQAQCdASoQAAkABUB8JZQAAujdBJDQAAD+6OdkhXQmTl4UD0Xo7alUU2G+d7lpIAAAAA=="
+  },
+  "project-financial-records.png": {
+    "width": 16,
+    "height": 9,
+    "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACQAQCdASoQAAkABUB8JZQAAuU2DAAA/ujMNn8iuLY3zG1Oxr5s6HzT9BDv/h1Ra5h0AArQAh4AAA=="
+  },
+  "project-synth-ai.png": {
+    "width": 16,
+    "height": 9,
+    "blurDataURL": "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoQAAkABUB8JaQAA3AA/vBPwAA="
+  },
+  "dicoding.png": {
+    "width": 16,
+    "height": 16,
+    "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAwAgCdASoQABAABUB8JYwCdAEPCFxGbiWMAAD+yx8v2gnBDzLY5qAvOJd5i/QcLWkHLWH4Xq0bEswA"
+  },
+  "udemy.png": {
+    "width": 16,
+    "height": 16,
+    "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAQCdASoQABAABUB8JZwAD4qQa4wwAAD+8cnee3nY7NCu9YE/Sn2JRS5JPmgyN98Hi8Y4EdOFG2H80ojqAAAA"
+  },
+  "w3schools.png": {
+    "width": 16,
+    "height": 16,
+    "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQAQCdASoQABAABUB8JagAAuivq/QQAAD+8EHthruud+bpF224EToyatNXAto0FcdOG8Odef1E1ykaE27Y7r6YgSAmNRFzc0fyiv+kkceRi1pH00kUAi5AEXAAAA=="
+  },
+  "zerotomastery.png": {
+    "width": 16,
+    "height": 16,
+    "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQABAABUB8JaAAdoADH0R67EAA/vHHPa8MxDq3Y8SyXRttyXhP2PZPSX8WpuyZeQTu29UPAJjr0KEgAHBhUBKU1801AAAA"
+  }
+}

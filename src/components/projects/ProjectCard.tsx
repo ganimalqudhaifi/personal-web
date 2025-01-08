@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import path from "path";
 import React from "react";
 
-import { IconProps } from "@/types";
+import placeholders from "@/data/placeholders.json";
+import { IconProps, Placeholders } from "@/types";
 
 export default function ProjectCard({
   imagePath,
@@ -20,6 +22,8 @@ export default function ProjectCard({
   link: string;
 }) {
   const router = useRouter();
+  const fileName = path.basename(imagePath);
+  const placeholder = placeholders as Placeholders;
 
   return (
     <div
@@ -27,7 +31,14 @@ export default function ProjectCard({
       onClick={() => router.push(link)}
     >
       <div className="relative h-48 w-full">
-        <Image src={imagePath} alt={title} fill={true} className="w-full" />
+        <Image
+          src={imagePath}
+          alt={title}
+          fill={true}
+          className="w-full"
+          placeholder="blur"
+          blurDataURL={placeholder[fileName]?.blurDataURL}
+        />
       </div>
       <div className="border-2 border-t-0 border-zinc-800/50 p-4">
         <h2 className="my-3 inline-block text-zinc-300 duration-300 hover:text-[#29fd53]">

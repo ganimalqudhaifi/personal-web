@@ -13,6 +13,9 @@ import {
 } from "react-icons/pi";
 import { RxHamburgerMenu } from "react-icons/rx";
 
+import placeholders from "@/data/placeholders.json";
+import { Placeholders } from "@/types";
+
 const navLinks = [
   {
     text: "Home",
@@ -48,6 +51,8 @@ export default function Sidebar({ handleMenuOpen }: SidebarProps) {
     setActivePage(pathname);
   }, [pathname]);
 
+  const placeholder = placeholders as Placeholders;
+
   return (
     <div>
       <div className="relative flex w-full items-center justify-between border-b border-zinc-800 bg-zinc-900 p-4 md:p-6 lg:border-0 lg:p-0">
@@ -59,6 +64,8 @@ export default function Sidebar({ handleMenuOpen }: SidebarProps) {
             height={100}
             className="w-10 rounded-full lg:w-28"
             priority
+            placeholder="blur"
+            blurDataURL={placeholder["profile-picture.jpg"].blurDataURL}
           />
           <p className="text-lg font-semibold tracking-wide text-gray-100 lg:text-xl">
             Ganim Alqudhaifi

@@ -1,11 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
+import path from "path";
 import { PiBookBookmark, PiChalkboard, PiLinkSimple } from "react-icons/pi";
 
 import Divider from "@/components/Divider";
 import Layout from "@/components/Layout";
 import courseListReference from "@/data/courseListReference.json";
+import placeholders from "@/data/placeholders.json";
 import uiListReference from "@/data/uiListReference.json";
+import { Placeholders } from "@/types";
+
+const placeholder = placeholders as Placeholders;
 
 export default function References() {
   return (
@@ -39,6 +44,10 @@ export default function References() {
                   height={48}
                   className="w-12 rounded shadow"
                   priority
+                  placeholder="blur"
+                  blurDataURL={
+                    placeholder[`${path.basename(course.src)}`].blurDataURL
+                  }
                 />
                 <p>{course.name}</p>
               </div>
