@@ -1,16 +1,11 @@
-import Image from "next/image";
 import Link from "next/link";
-import path from "path";
 import { PiBookBookmark, PiChalkboard, PiLinkSimple } from "react-icons/pi";
 
 import Divider from "@/components/Divider";
 import Layout from "@/components/Layout";
+import CustomImage from "@/components/custom-image";
 import courseListReference from "@/data/courseListReference.json";
-import placeholders from "@/data/placeholders.json";
 import uiListReference from "@/data/uiListReference.json";
-import { Placeholders } from "@/types";
-
-const placeholder = placeholders as Placeholders;
 
 export default function References() {
   return (
@@ -37,17 +32,12 @@ export default function References() {
               className="flex items-center justify-between rounded border border-zinc-800/60 bg-zinc-600/5 p-2 shadow"
             >
               <div className="flex items-center space-x-2">
-                <Image
-                  alt={`${course.name} logo`}
+                <CustomImage
                   src={course.src}
+                  alt={`${course.name} logo`}
                   width={48}
                   height={48}
                   className="w-12 rounded shadow"
-                  priority
-                  placeholder="blur"
-                  blurDataURL={
-                    placeholder[`${path.basename(course.src)}`].blurDataURL
-                  }
                 />
                 <p>{course.name}</p>
               </div>

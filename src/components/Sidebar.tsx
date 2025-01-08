@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import CustomImage from "./custom-image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -12,9 +12,6 @@ import {
   PiSelectionBackground,
 } from "react-icons/pi";
 import { RxHamburgerMenu } from "react-icons/rx";
-
-import placeholders from "@/data/placeholders.json";
-import { Placeholders } from "@/types";
 
 const navLinks = [
   {
@@ -51,21 +48,16 @@ export default function Sidebar({ handleMenuOpen }: SidebarProps) {
     setActivePage(pathname);
   }, [pathname]);
 
-  const placeholder = placeholders as Placeholders;
-
   return (
     <div>
       <div className="relative flex w-full items-center justify-between border-b border-zinc-800 bg-zinc-900 p-4 md:p-6 lg:border-0 lg:p-0">
         <div className="flex items-center space-x-3 lg:flex-col lg:space-y-3 lg:space-x-0">
-          <Image
-            alt="profile picture"
+          <CustomImage
             src="/profile-picture.jpg"
+            alt="profile picture"
             width={100}
             height={100}
             className="w-10 rounded-full lg:w-28"
-            priority
-            placeholder="blur"
-            blurDataURL={placeholder["profile-picture.jpg"].blurDataURL}
           />
           <p className="text-lg font-semibold tracking-wide text-gray-100 lg:text-xl">
             Ganim Alqudhaifi

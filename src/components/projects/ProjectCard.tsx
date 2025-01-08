@@ -1,12 +1,10 @@
 "use client";
 
-import Image from "next/image";
+import CustomImage from "../custom-image";
 import { useRouter } from "next/navigation";
-import path from "path";
 import React from "react";
 
-import placeholders from "@/data/placeholders.json";
-import { IconProps, Placeholders } from "@/types";
+import { IconProps } from "@/types";
 
 export default function ProjectCard({
   imagePath,
@@ -22,8 +20,6 @@ export default function ProjectCard({
   link: string;
 }) {
   const router = useRouter();
-  const fileName = path.basename(imagePath);
-  const placeholder = placeholders as Placeholders;
 
   return (
     <div
@@ -31,13 +27,11 @@ export default function ProjectCard({
       onClick={() => router.push(link)}
     >
       <div className="relative h-48 w-full">
-        <Image
+        <CustomImage
           src={imagePath}
           alt={title}
           fill={true}
           className="w-full"
-          placeholder="blur"
-          blurDataURL={placeholder[fileName]?.blurDataURL}
         />
       </div>
       <div className="border-2 border-t-0 border-zinc-800/50 p-4">

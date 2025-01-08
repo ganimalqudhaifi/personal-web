@@ -1,12 +1,11 @@
-import Image from "next/image";
 import Link from "next/link";
-import path from "path";
 import React from "react";
 import { BiLinkExternal } from "react-icons/bi";
 import { PiCertificate, PiCodeBold } from "react-icons/pi";
 
 import Divider from "@/components/Divider";
 import Layout from "@/components/Layout";
+import CustomImage from "@/components/custom-image";
 import IconCSS from "@/components/icons/IconCSS";
 import IconFirebase from "@/components/icons/IconFirebase";
 import IconGraphQL from "@/components/icons/IconGraphQL";
@@ -26,8 +25,7 @@ import IconTailwindCSS from "@/components/icons/IconTailwindCSS";
 import IconTypescript from "@/components/icons/IconTypeScript";
 import IconVueJS from "@/components/icons/IconVueJS";
 import certificateLists from "@/data/certificateLists.json";
-import placeholders from "@/data/placeholders.json";
-import type { IconProps, Placeholders } from "@/types";
+import type { IconProps } from "@/types";
 
 type Certificate = {
   instance: string;
@@ -57,20 +55,15 @@ const skills = [
   { Icon: IconPostgreSQL, name: "PostgreSQL" },
 ];
 
-const placeholder = placeholders as Placeholders;
-
 const CertificateCard = ({ certificate }: { certificate: Certificate }) => (
   <div className="group/certificate relative flex cursor-pointer items-center justify-between rounded border border-zinc-800/60 bg-zinc-600/5 p-2 subpixel-antialiased shadow duration-200 before:absolute before:inset-y-0 before:right-0 before:w-32 before:from-transparent before:via-zinc-900/80 before:to-zinc-900 before:content-[''] hover:scale-[1.02] hover:border-zinc-700/50 before:hover:bg-gradient-to-r">
     <div className="flex items-center space-x-3">
-      <Image
-        alt={`${certificate.instance} logo`}
+      <CustomImage
         src={`/logo/${certificate.instance}.png`}
+        alt={`${certificate.instance} logo`}
         width={64}
         height={64}
         className="w-16 rounded shadow"
-        priority
-        placeholder="blur"
-        blurDataURL={placeholder[`${certificate.instance}.png`].blurDataURL}
       />
       <div>
         <p className="text-sm capitalize text-indigo-300">
