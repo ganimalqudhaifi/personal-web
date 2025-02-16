@@ -16,6 +16,10 @@
     "href": "https://unsplash.com/"
   },
   {
+    "name": "Images - Freepik",
+    "href": "https://www.freepik.com/"
+  },
+  {
     "name": "Images - Pexels",
     "href": "https://www.pexels.com/"
   },
@@ -32,7 +36,15 @@
     "href": "https://daisyui.com/"
   },
   {
+    "name": "Tailwind Component - Float UI",
+    "href": "https://floatui.com/"
+  },
+  {
     "name": "API - Foursquare",
     "href": "https://location.foursquare.com/"
+  },
+  {
+    "name": "API - Notion",
+    "href": "https://developers.notion.com/"
   }
 ]

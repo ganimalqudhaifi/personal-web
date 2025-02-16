@@ -14,6 +14,7 @@ import IconHasura from "@/components/icons/IconHasura";
 import IconJavascript from "@/components/icons/IconJavascript";
 import IconJest from "@/components/icons/IconJest";
 import IconLangchain from "@/components/icons/IconLangchain";
+import IconLaravel from "@/components/icons/IconLaravel";
 import IconMongoDB from "@/components/icons/IconMongoDB";
 import IconNextJS from "@/components/icons/IconNextJS";
 import IconNodeJS from "@/components/icons/IconNodeJS";
@@ -53,6 +54,7 @@ const skills = [
   { Icon: IconHasura, name: "Hasura" },
   { Icon: IconGraphQL, name: "GraphQL" },
   { Icon: IconPostgreSQL, name: "PostgreSQL" },
+  { Icon: IconLaravel, name: "Laravel" },
 ];
 
 const CertificateCard = ({ certificate }: { certificate: Certificate }) => (
@@ -66,7 +68,7 @@ const CertificateCard = ({ certificate }: { certificate: Certificate }) => (
         className="w-16 rounded shadow"
       />
       <div>
-        <p className="text-sm capitalize text-indigo-300">
+        <p className="text-sm text-indigo-300 capitalize">
           {certificate.instance}
         </p>
         <p className="mb-0.5 text-zinc-400">{certificate.title}</p>
@@ -74,7 +76,7 @@ const CertificateCard = ({ certificate }: { certificate: Certificate }) => (
       </div>
     </div>
     <Link href={certificate.href} target="_blank">
-      <BiLinkExternal className="absolute right-0 top-1/2 mr-4 hidden h-6 w-6 -translate-y-1/2 text-zinc-600 duration-300 hover:scale-110 hover:text-zinc-400 group-hover/certificate:block" />
+      <BiLinkExternal className="absolute right-0 hidden w-6 h-6 mr-4 duration-300 -translate-y-1/2 top-1/2 text-zinc-600 hover:scale-110 hover:text-zinc-400 group-hover/certificate:block" />
     </Link>
   </div>
 );
@@ -100,7 +102,7 @@ export default function Home() {
           Hi, I&apos;m Alqi{" "}
           <span className="inline-block animate-wiggle">👋</span>
         </h2>
-        <ul className="mb-6 list-inside list-disc text-zinc-400 lg:flex lg:space-x-8">
+        <ul className="mb-6 list-disc list-inside text-zinc-400 lg:flex lg:space-x-8">
           <li>Front-End Developer</li>
           <li>
             Based in Depok <span className="text-sm">ID</span>
