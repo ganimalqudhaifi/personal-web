@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Front-End Developer",
     "Full-Stack Developer",
   ],
+  icons: "/favicon.png",
   authors: [{ name: "Andi Muhammad Ganim Alqudhaifi" }],
   openGraph: {
     type: "website",
