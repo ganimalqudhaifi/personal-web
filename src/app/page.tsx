@@ -6,27 +6,8 @@ import { PiCertificate, PiCodeBold } from "react-icons/pi";
 import Divider from "@/components/Divider";
 import Layout from "@/components/Layout";
 import CustomImage from "@/components/custom-image";
-import IconCSS from "@/components/icons/IconCSS";
-import IconFirebase from "@/components/icons/IconFirebase";
-import IconGraphQL from "@/components/icons/IconGraphQL";
-import IconHTML from "@/components/icons/IconHTML";
-import IconHasura from "@/components/icons/IconHasura";
-import IconJavascript from "@/components/icons/IconJavascript";
-import IconJest from "@/components/icons/IconJest";
-import IconLangchain from "@/components/icons/IconLangchain";
-import IconLaravel from "@/components/icons/IconLaravel";
-import IconMongoDB from "@/components/icons/IconMongoDB";
-import IconNextJS from "@/components/icons/IconNextJS";
-import IconNodeJS from "@/components/icons/IconNodeJS";
-import IconNotion from "@/components/icons/IconNotion";
-import IconOpenAI from "@/components/icons/IconOpenAI";
-import IconPostgreSQL from "@/components/icons/IconPostgreSQL";
-import IconReactJS from "@/components/icons/IconReactJS";
-import IconTailwindCSS from "@/components/icons/IconTailwindCSS";
-import IconTypescript from "@/components/icons/IconTypeScript";
-import IconVueJS from "@/components/icons/IconVueJS";
+import Icon from "@/components/icon";
 import certificateLists from "@/data/certificateLists.json";
-import type { IconProps } from "@/types";
 
 type Certificate = {
   instance: string;
@@ -36,25 +17,55 @@ type Certificate = {
 };
 
 const skills = [
-  { Icon: IconReactJS, name: "React JS" },
-  { Icon: IconNextJS, name: "Next JS" },
-  { Icon: IconVueJS, name: "Vue JS" },
-  { Icon: IconNodeJS, name: "Node JS" },
-  { Icon: IconMongoDB, name: "Mongo DB" },
-  { Icon: IconTailwindCSS, name: "Tailwind CSS" },
-  { Icon: IconJest, name: "Jest" },
-  { Icon: IconFirebase, name: "Firebase" },
-  { Icon: IconJavascript, name: "Javascript" },
-  { Icon: IconHTML, name: "HTML5" },
-  { Icon: IconCSS, name: "CSS3" },
-  { Icon: IconTypescript, name: "Typescript" },
-  { Icon: IconLangchain, name: "Langchain" },
-  { Icon: IconOpenAI, name: "OpenAI" },
-  { Icon: IconNotion, name: "Notion" },
-  { Icon: IconHasura, name: "Hasura" },
-  { Icon: IconGraphQL, name: "GraphQL" },
-  { Icon: IconPostgreSQL, name: "PostgreSQL" },
-  { Icon: IconLaravel, name: "Laravel" },
+  // Core Frontend Frameworks & Libraries
+  { icon: "reactjs", name: "React JS" },
+  { icon: "nextjs", name: "Next.js" },
+  { icon: "vuejs", name: "Vue.js" },
+  { icon: "nuxt", name: "Nuxt" },
+  { icon: "angular", name: "Angular" },
+
+  // Core Backend Technologies
+  { icon: "nodejs", name: "Node.js" },
+  { icon: "express", name: "Express.js" },
+  { icon: "php", name: "PHP" },
+  { icon: "laravel", name: "Laravel" },
+  { icon: "python", name: "Python", isHidden: true },
+
+  // Databases & Query Languages
+  { icon: "mongodb", name: "MongoDB" },
+  { icon: "postgresql", name: "PostgreSQL" },
+  { icon: "graphql", name: "GraphQL" },
+  { icon: "hasura", name: "Hasura" },
+
+  // Cloud & DevOps
+  { icon: "aws", name: "AWS", isHidden: true },
+  { icon: "gcp", name: "Google Cloud" },
+  { icon: "firebase", name: "Firebase" },
+  { icon: "pinecone", name: "Pinecone", isHidden: true },
+  { icon: "docker", name: "Docker", isHidden: true },
+
+  // Styling & UI
+  { icon: "tailwindcss", name: "Tailwind CSS" },
+  { icon: "css3", name: "CSS3" },
+  { icon: "html5", name: "HTML5" },
+  { icon: "figma", name: "Figma" },
+
+  // Programming Languages & Tooling
+  { icon: "javascript", name: "JavaScript" },
+  { icon: "typescript", name: "TypeScript" },
+  { icon: "kotlin", name: "Kotlin", isHidden: true },
+
+  // AI & Automation
+  { icon: "openai", name: "OpenAI" },
+  { icon: "langchain", name: "Langchain" },
+
+  // Testing
+  { icon: "jest", name: "Jest" },
+  { icon: "testing-library", name: "Testing Library" },
+  { icon: "storybook", name: "Storybook", isHidden: true },
+
+  // Productivity & Misc
+  { icon: "notion", name: "Notion" },
 ];
 
 const CertificateCard = ({ certificate }: { certificate: Certificate }) => (
@@ -82,15 +93,19 @@ const CertificateCard = ({ certificate }: { certificate: Certificate }) => (
 );
 
 const SkillCard = ({
-  Icon,
-  skill,
+  iconName,
+  skillName,
+  isHidden = false,
 }: {
-  Icon: React.ComponentType<IconProps>;
-  skill: string;
+  iconName: string;
+  skillName: string;
+  isHidden?: boolean;
 }) => (
-  <div className="flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 pl-3.5 shadow">
-    <Icon size={30} />
-    <p className="text-sm text-zinc-500">{skill}</p>
+  <div
+    className={`${isHidden && "hidden"} flex items-center space-x-2 rounded-full border border-zinc-800 p-2.5 pl-3.5 shadow`}
+  >
+    <Icon size={30} name={iconName} />
+    <p className="text-sm text-zinc-500">{skillName}</p>
   </div>
 );
 
@@ -149,7 +164,12 @@ export default function Home() {
         <p className="mt-2 mb-6 text-zinc-400">My Programing Skills</p>
         <div className="flex flex-wrap gap-2.5">
           {skills.map((skill, i) => (
-            <SkillCard key={i} Icon={skill.Icon} skill={skill.name} />
+            <SkillCard
+              key={i}
+              iconName={skill.icon}
+              skillName={skill.name}
+              isHidden={skill.isHidden}
+            />
           ))}
         </div>
       </div>

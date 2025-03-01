@@ -1,10 +1,3 @@
-import IconFirebase from "@/components/icons/IconFirebase";
-import IconLangchain from "@/components/icons/IconLangchain";
-import IconMongoDB from "@/components/icons/IconMongoDB";
-import IconNextJS from "@/components/icons/IconNextJS";
-import IconNotion from "@/components/icons/IconNotion";
-import IconTailwindCSS from "@/components/icons/IconTailwindCSS";
-
 const projectList = [
   {
     id: "synth-ai",
@@ -15,7 +8,7 @@ const projectList = [
     imagePath: "/project-synth-ai.png",
     description:
       "AI-powered platform that integrates multiple functionalities",
-    techStack: [IconNextJS, IconLangchain, IconMongoDB, IconNotion],
+    techStack: ['nextjs', 'langchain', 'mongodb', 'notion'],
   },
   {
     id: "financial-records",
@@ -26,7 +19,7 @@ const projectList = [
     imagePath: "/project-financial-records.png",
     description:
       "A web application that can track financial transactions in real-time",
-    techStack: [IconNextJS, IconFirebase, IconTailwindCSS],
+    techStack: ['nextjs', 'firebase', 'tailwindcss'],
   },
   {
     id: "discover-videos",
@@ -37,7 +30,7 @@ const projectList = [
     imagePath: "/project-discover-videos.png",
     description:
       "A web application that integrate with third party API and oAuth login",
-    techStack: [IconNextJS, IconFirebase, IconTailwindCSS],
+    techStack: ['nextjs', 'firebase', 'tailwindcss'],
   },
 ];
 

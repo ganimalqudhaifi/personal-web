@@ -1,10 +1,9 @@
 "use client";
 
 import CustomImage from "../custom-image";
+import Icon from "../icon";
 import { useRouter } from "next/navigation";
 import React from "react";
-
-import { IconProps } from "@/types";
 
 export default function ProjectCard({
   imagePath,
@@ -15,7 +14,7 @@ export default function ProjectCard({
 }: {
   imagePath: string;
   title: string;
-  techStack: React.ComponentType<IconProps>[];
+  techStack: string[];
   description: string;
   link: string;
 }) {
@@ -40,8 +39,8 @@ export default function ProjectCard({
         </h2>
         <p className="text-sm text-zinc-400">{description}</p>
         <div className="mt-4 mb-2 flex space-x-2.5">
-          {techStack.map((TechIcon, index) => (
-            <TechIcon key={index} size={25} />
+          {techStack.map((iconName, index) => (
+            <Icon key={index} size={25} name={iconName} />
           ))}
         </div>
       </div>
