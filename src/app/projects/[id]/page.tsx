@@ -8,6 +8,7 @@ import { HiExternalLink } from "react-icons/hi";
 import { IoMdArrowRoundBack } from "react-icons/io";
 
 import Divider from "@/components/Divider";
+import Icon from "@/components/icon";
 import MdxLayout from "@/components/mdx-layout";
 import projectList from "@/data/ProjectList";
 import MarkdownDiscoverVideos from "@/markdown/discover-videos.mdx";
@@ -44,8 +45,8 @@ export default function FinancialRecords({}) {
           <Divider />
           <div className="flex justify-between text-zinc-500">
             <div className="flex space-x-3">
-              {currentProject.techStack.map((TechIcon, index) => (
-                <TechIcon key={index} size={25} />
+              {currentProject.techStack.map((iconName, index) => (
+                <Icon key={index} size={25} name={iconName} />
               ))}
             </div>
             <div className="flex justify-end gap-3">
