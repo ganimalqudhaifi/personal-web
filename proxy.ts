@@ -2,7 +2,7 @@ import projectList from "@/data/ProjectList";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   if (request.nextUrl.pathname.startsWith("/projects")) {
     const pathname = request.nextUrl.pathname;
     const segments = pathname.split("/");
