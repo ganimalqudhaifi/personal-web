@@ -2,8 +2,8 @@ import { Project } from "../types/project";
 import Link from "next/link";
 import React from "react";
 
+import Icon from "@/components/Icon";
 import CustomImage from "@/components/custom-image";
-import Icon from "@/components/icon";
 
 type ProjectCardProps = Pick<
   Project,

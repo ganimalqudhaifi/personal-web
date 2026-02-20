@@ -1,3 +1,5 @@
+import { IconName } from "@/types/icon";
+
 export type Project = {
   slug: string;
   title: string;
@@ -5,5 +7,5 @@ export type Project = {
   demoLink: string;
   imagePath: string;
   description: string;
-  techStack: string[];
+  techStack: IconName[];
 }

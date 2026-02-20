@@ -6,7 +6,7 @@ import { HiExternalLink } from "react-icons/hi";
 import { IoMdArrowRoundBack } from "react-icons/io";
 
 import Divider from "@/components/Divider";
-import Icon from "@/components/icon";
+import Icon from "@/components/Icon";
 import MdxLayout from "@/components/mdx-layout";
 import { projectList } from "@/features/projects/data/ProjectList";
 

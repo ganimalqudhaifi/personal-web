@@ -1,5 +1,7 @@
+import { IconName } from "@/types/icon";
+
 export type Skill = {
-  icon: string;
+  icon: IconName;
   name: string;
   isHidden?: boolean;
 }

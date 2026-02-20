@@ -2,7 +2,7 @@ import { skills } from "../data/skills";
 import { Skill } from "../types/skill";
 import { PiCodeBold } from "react-icons/pi";
 
-import Icon from "@/components/icon";
+import Icon from "@/components/Icon";
 
 const SkillCard = ({ icon, name, isHidden = false }: Skill) => (
   <div
