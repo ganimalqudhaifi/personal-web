@@ -1,0 +1,46 @@
+import { Certificate } from "../types/certificate";
+
+export const certificateLists: Certificate[] = [
+  {
+    instance: "udemy",
+    title: "Javascript: The Advanced Concepts",
+    date: "Feb 19, 2024",
+    href: "https://www.udemy.com/certificate/UC-d051420f-1a21-4451-bbf1-391a7e25e21a/"
+  },
+  {
+    instance: "udemy",
+    title: "Complete Next.js Developer: Zero to Mastery",
+    date: "Dec 29, 2023",
+    href: "https://www.udemy.com/certificate/UC-0476d5ff-42ab-48f8-981c-f3411c49d88b/"
+  },
+  {
+    instance: "udemy",
+    title: "Testing React with Jest and React Testing Library",
+    date: "Feb 6, 2023",
+    href: "https://www.udemy.com/certificate/UC-4fef95b4-f7d5-4ee7-8180-a3033ab96352/"
+  },
+  {
+    instance: "dicoding",
+    title: "Belajar Membuat Aplikasi Web Dengan React",
+    date: "Aug 5, 2022",
+    href: "https://www.dicoding.com/certificates/2VX31L68VZYQ"
+  },
+  {
+    instance: "dicoding",
+    title: "Belajar Membuat Front-End Web Untuk Pemula",
+    date: "Jul 24, 2022",
+    href: "https://www.dicoding.com/certificates/EYX42QO6WZDL"
+  },
+  {
+    instance: "dicoding",
+    title: "Belajar Dasar Pemrograman Javascript",
+    date: "Jul 16, 2022",
+    href: "https://www.dicoding.com/certificates/L4PQ42W4OXO1"
+  },
+  {
+    instance: "dicoding",
+    title: "Belajar Dasar Pemrograman Web",
+    date: "Jul 11, 2022",
+    href: "https://www.dicoding.com/certificates/1OP8622NVXQK"
+  }
+]

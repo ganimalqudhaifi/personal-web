@@ -1,16 +1,12 @@
 import Divider from "@/components/Divider";
 import Layout from "@/components/Layout";
+import PageHeader from "@/components/PageHeader";
 
 export default function About() {
   return (
     <Layout>
-      <div>
-        <h1 className="mb-2 text-2xl font-bold">About</h1>
-        <p className="text-zinc-400">A short story about me</p>
-      </div>
-
+      <PageHeader title="About" description="A short story about me" />
       <Divider />
-
       <div>
         <p className="text-zinc-300/90">
           Perjalanan saya ke dunia pemrograman dimulai dengan tidak lebih dari

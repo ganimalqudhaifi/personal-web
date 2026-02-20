@@ -3,6 +3,7 @@ import { PiBookBookmark, PiChalkboard, PiLinkSimple } from "react-icons/pi";
 
 import Divider from "@/components/Divider";
 import Layout from "@/components/Layout";
+import PageHeader from "@/components/PageHeader";
 import CustomImage from "@/components/custom-image";
 import courseListReference from "@/data/courseListReference.json";
 import uiListReference from "@/data/uiListReference.json";
@@ -10,15 +11,11 @@ import uiListReference from "@/data/uiListReference.json";
 export default function References() {
   return (
     <Layout>
-      <div>
-        <h1 className="mb-2 text-2xl font-bold">References</h1>
-        <p className="text-zinc-400">
-          Recomendation of discovered source that I used
-        </p>
-      </div>
-
+      <PageHeader
+        title="References"
+        description="Recomendation of discovered source that I used"
+      />
       <Divider />
-
       <div>
         <div className="flex items-center space-x-2 text-zinc-200">
           <PiBookBookmark size={24} />
