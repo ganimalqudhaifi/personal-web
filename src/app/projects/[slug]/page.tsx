@@ -1,8 +1,6 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { FaGithub } from "react-icons/fa";
 import { HiExternalLink } from "react-icons/hi";
 import { IoMdArrowRoundBack } from "react-icons/io";
@@ -10,20 +8,27 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 import Divider from "@/components/Divider";
 import Icon from "@/components/icon";
 import MdxLayout from "@/components/mdx-layout";
-import projectList from "@/data/ProjectList";
-import MarkdownDiscoverVideos from "@/markdown/discover-videos.mdx";
-import MarkdownFinancialRecords from "@/markdown/financial-records.mdx";
-import MarkdownSytnAI from "@/markdown/synth-ai.mdx";
+import { projectList } from "@/features/projects/data/ProjectList";
 
-export default function FinancialRecords({}) {
-  const params = useParams();
-  const id = params.id;
+export function generateStaticParams() {
+  return projectList.map((project) => ({
+    slug: project.slug,
+  }));
+}
 
-  const currentProject = projectList.find((project) => project.id === id);
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const project = projectList.find((project) => project.slug === slug);
 
-  if (!currentProject) {
-    return <div>Project not found</div>;
-  }
+  if (!project) redirect("/projects");
+
+  const { default: Content } = await import(
+    `@/features/projects/markdown/${slug}.mdx`
+  );
 
   return (
     <div className="min-h-screen w-full bg-zinc-900">
@@ -37,21 +42,19 @@ export default function FinancialRecords({}) {
             <span>Back to Projects</span>
           </Link>
           <div>
-            <h2 className="mb-1 text-4xl font-semibold">
-              {currentProject.title}
-            </h2>
-            <p className="text-zinc-400">{currentProject.description}</p>
+            <h2 className="mb-1 text-4xl font-semibold">{project.title}</h2>
+            <p className="text-zinc-400">{project.description}</p>
           </div>
           <Divider />
           <div className="flex justify-between text-zinc-500">
             <div className="flex space-x-3">
-              {currentProject.techStack.map((iconName, index) => (
-                <Icon key={index} size={25} name={iconName} />
+              {project.techStack.map((iconName) => (
+                <Icon key={iconName} size={25} name={iconName} />
               ))}
             </div>
             <div className="flex justify-end gap-3">
               <Link
-                href={currentProject.githubLink}
+                href={project.githubLink}
                 target="_blank"
                 className="flex items-center gap-1 duration-300 hover:text-zinc-300"
               >
@@ -59,7 +62,7 @@ export default function FinancialRecords({}) {
                 <span>Github</span>
               </Link>
               <Link
-                href={currentProject.demoLink}
+                href={project.demoLink}
                 target="_blank"
                 className="flex items-center gap-1 duration-300 hover:text-zinc-300"
               >
@@ -69,20 +72,14 @@ export default function FinancialRecords({}) {
             </div>
           </div>
           <Image
-            alt="financial records project"
-            src={currentProject.imagePath}
+            alt={project.title}
+            src={project.imagePath}
             width={1000}
             height={1000}
             className="w-full rounded"
           />
           <MdxLayout>
-            {id === "financial-records" ? (
-              <MarkdownFinancialRecords />
-            ) : id === "discover-videos" ? (
-              <MarkdownDiscoverVideos />
-            ) : id === "synth-ai" ? (
-              <MarkdownSytnAI />
-            ) : null}
+            <Content />
           </MdxLayout>
         </div>
       </div>

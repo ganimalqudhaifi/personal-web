@@ -1,29 +1,26 @@
-"use client";
-
-import CustomImage from "../custom-image";
-import Icon from "../icon";
-import { useRouter } from "next/navigation";
+import { Project } from "../types/project";
+import Link from "next/link";
 import React from "react";
 
+import CustomImage from "@/components/custom-image";
+import Icon from "@/components/icon";
+
+type ProjectCardProps = Pick<
+  Project,
+  "slug" | "imagePath" | "title" | "techStack" | "description"
+>;
+
 export default function ProjectCard({
+  slug,
   imagePath,
   title,
   techStack,
   description,
-  link,
-}: {
-  imagePath: string;
-  title: string;
-  techStack: string[];
-  description: string;
-  link: string;
-}) {
-  const router = useRouter();
-
+}: ProjectCardProps) {
   return (
-    <div
+    <Link
       className="w-full cursor-pointer overflow-hidden rounded-xl bg-zinc-600/5 duration-300 hover:scale-[1.02]"
-      onClick={() => router.push(link)}
+      href={`/projects/${slug}`}
     >
       <div className="relative h-48 w-full">
         <CustomImage
@@ -44,6 +41,6 @@ export default function ProjectCard({
           ))}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

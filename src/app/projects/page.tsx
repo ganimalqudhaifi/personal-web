@@ -1,8 +1,8 @@
 import Divider from "@/components/Divider";
 import Layout from "@/components/Layout";
-import ProjectCardSection from "@/components/projects/ProjectCardSection";
+import ProjectCardSection from "@/features/projects/components/ProjectCardSection";
 
-export default function Projects() {
+export default function Page() {
   return (
     <Layout>
       <div>

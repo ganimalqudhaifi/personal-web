@@ -1,8 +1,9 @@
-const projectList = [
+import { Project } from "../types/project";
+
+export const projectList: Project[] = [
   {
-    id: "synth-ai",
+    slug: "synth-ai",
     title: "Synth AI",
-    link: "/projects/synth-ai",
     githubLink: "https://github.com/ganimalqudhaifi/synth-ai",
     demoLink: "https://synth-ai.ganimalqudhaifi.my.id",
     imagePath: "/project-synth-ai.png",
@@ -11,9 +12,8 @@ const projectList = [
     techStack: ['nextjs', 'langchain', 'mongodb', 'notion'],
   },
   {
-    id: "financial-records",
+    slug: "financial-records",
     title: "Financial Records",
-    link: "/projects/financial-records",
     githubLink: "https://github.com/ganimalqudhaifi/financial-records",
     demoLink: "https://financial-records.ganimalqudhaifi.my.id",
     imagePath: "/project-financial-records.png",
@@ -22,9 +22,8 @@ const projectList = [
     techStack: ['nextjs', 'firebase', 'tailwindcss'],
   },
   {
-    id: "discover-videos",
+    slug: "discover-videos",
     title: "Discover Videos",
-    link: "/projects/discover-videos",
     githubLink: "https://github.com/ganimalqudhaifi/discover-videos",
     demoLink: "https://discover-videos.ganimalqudhaifi.my.id",
     imagePath: "/project-discover-videos.png",
@@ -33,5 +32,3 @@ const projectList = [
     techStack: ['nextjs', 'firebase', 'tailwindcss'],
   },
 ];
-
-export default projectList;
