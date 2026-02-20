@@ -1,12 +1,29 @@
 import Link from "next/link";
+import { IconType } from "react-icons";
 import { PiBookBookmark, PiChalkboard, PiLinkSimple } from "react-icons/pi";
 
 import Divider from "@/components/Divider";
 import Layout from "@/components/Layout";
 import PageHeader from "@/components/PageHeader";
 import CustomImage from "@/components/custom-image";
-import courseListReference from "@/data/courseListReference.json";
-import uiListReference from "@/data/uiListReference.json";
+import { courseListReferences } from "@/features/references/data/courseListReference";
+import { uiListReferences } from "@/features/references/data/ui-list-references";
+
+type SectionHeaderProps = {
+  Icon: IconType;
+  name: string;
+  description: string;
+};
+
+const SectionHeader = ({ Icon, name, description }: SectionHeaderProps) => (
+  <>
+    <div className="flex items-center space-x-2 text-zinc-200">
+      <Icon size={24} />
+      <h2 className="text-xl">{name}</h2>
+    </div>
+    <p className="mt-2 mb-4 text-zinc-400">{description}</p>
+  </>
+);
 
 export default function References() {
   return (
@@ -17,15 +34,15 @@ export default function References() {
       />
       <Divider />
       <div>
-        <div className="flex items-center space-x-2 text-zinc-200">
-          <PiBookBookmark size={24} />
-          <h2 className="text-xl">Course</h2>
-        </div>
-        <p className="mt-2 mb-4 text-zinc-400">Recomendation Course</p>
+        <SectionHeader
+          Icon={PiBookBookmark}
+          name="Course"
+          description="Recomendation Course"
+        />
         <div className="space-y-3 text-zinc-400">
-          {courseListReference.map((course, i) => (
+          {courseListReferences.map((course) => (
             <div
-              key={i}
+              key={course.name}
               className="flex items-center justify-between rounded border border-zinc-800/60 bg-zinc-600/5 p-2 shadow"
             >
               <div className="flex items-center space-x-2">
@@ -53,15 +70,15 @@ export default function References() {
       <Divider />
 
       <div>
-        <div className="flex items-center space-x-2 text-zinc-200">
-          <PiChalkboard size={24} />
-          <h2 className="text-xl">UI</h2>
-        </div>
-        <p className="mt-2 mb-4 text-zinc-400">Recomendation UI Resources</p>
+        <SectionHeader
+          Icon={PiChalkboard}
+          name="UI"
+          description="Recomendation UI Resources"
+        />
         <div className="space-y-3 text-zinc-400">
-          {uiListReference.map((ui, i) => (
+          {uiListReferences.map((ui) => (
             <div
-              key={i}
+              key={ui.name}
               className="flex items-center justify-between rounded border border-zinc-800/60 bg-zinc-600/5 p-2 shadow"
             >
               <p className="text-[15px] sm:text-base">{ui.name}</p>

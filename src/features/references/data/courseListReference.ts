@@ -1,0 +1,24 @@
+import { CourseReference } from "../types/CourseReference";
+
+export const courseListReferences: CourseReference[] = [
+  {
+    src: "/logo/zerotomastery.png",
+    name: "Zero to Mastery",
+    href: "https://zerotomastery.io/"
+  },
+  {
+    src: "/logo/dicoding.png",
+    name: "Dicoding",
+    href: "https://www.dicoding.com/"
+  },
+  {
+    src: "/logo/udemy.png",
+    name: "Udemy",
+    href: "https://www.udemy.com/"
+  },
+  {
+    src: "/logo/w3schools.png",
+    name: "W3Schools",
+    href: "https://www.w3schools.com/"
+  }
+]
