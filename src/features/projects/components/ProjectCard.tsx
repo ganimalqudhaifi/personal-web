@@ -2,7 +2,7 @@ import { Project } from "../types/project";
 import Link from "next/link";
 import React from "react";
 
-import Icon from "@/components/Icon";
+import Icon from "@/components/Icon-temp";
 import CustomImage from "@/components/custom-image";
 
 type ProjectCardProps = Pick<
