@@ -1,4 +1,9 @@
 {
+  "favicon.png": {
+    "width": 16,
+    "height": 16,
+    "blurDataURL": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4WAoAAAAQAAAADwAADwAAQUxQSEcAAAARJ0AmbZurpH5lahYRwZ5QCEmSM3UIXw8QEU4g+Ut9Uojo/wRADy1Ay8wUiE1peRQ7VT+tOGl+x0n9tOxU20mITaFtAvTQAgBWUDggVAAAALABAJ0BKhAAEAAFQHwloAACF2tPkQAA372w5PGk/P9WA622rTge/YxTE/z72nHuXrsFO9i86wL9Yi6QOAhEXgv94xdysGZ3YCVz33NwnkrO9AAAAA=="
+  },
   "profile-picture.jpg": {
     "width": 16,
     "height": 16,
@@ -14,6 +19,16 @@
     "height": 9,
     "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACQAQCdASoQAAkABUB8JZQAAuU2DAAA/ujMNn8iuLY3zG1Oxr5s6HzT9BDv/h1Ra5h0AArQAh4AAA=="
   },
+  "project-rains-karya-multindo.png": {
+    "width": 16,
+    "height": 9,
+    "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoQAAkABUB8JYwAAuhUC75bAAD+6si27ekZqvyyJTua44GACqAsMSfGCIh6VBwA"
+  },
+  "project-sudeci-exportir.png": {
+    "width": 16,
+    "height": 9,
+    "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoQAAkABUB8JQBOgCHVHlrAAPulyyQRKWBTsOdQuTv73tyu2ORfiypZR9RXzqwq6SkP4AAA"
+  },
   "project-synth-ai.png": {
     "width": 16,
     "height": 9,
@@ -23,6 +38,11 @@
     "width": 16,
     "height": 16,
     "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAwAgCdASoQABAABUB8JYwCdAEPCFxGbiWMAAD+yx8v2gnBDzLY5qAvOJd5i/QcLWkHLWH4Xq0bEswA"
+  },
+  "hasura.png": {
+    "width": 15,
+    "height": 16,
+    "blurDataURL": "data:image/webp;base64,UklGRuIAAABXRUJQVlA4WAoAAAAQAAAADgAADwAAQUxQSGwAAAARL6CmbSQ2d2BuvW9zjYgAv1pwIkmSakuqJf/Qf/TsH41feB3R/7hD77iEs99lY4k67LvbmSQPVUkz0CmdvnNQ40n3hxwNqmNJf6iRVzK648mSTneZdkqsATqaX57Axeg00rUJVv1Oc8Am8wBWUDggUAAAAHACAJ0BKg8AEAAFQHwlsAJ0ugEt/tv8C5K+/eQA1wCcWV8DdNrkkngvLOdOpkfCTLbdGyXVx0Piw1/j8gNWMe/4DoxHkT97mEBg8H0cwIAA"
   },
   "udemy.png": {
     "width": 16,
