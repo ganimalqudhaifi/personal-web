@@ -8,4 +8,5 @@ export type Project = {
   imagePath: string;
   description: string;
   techStack: IconName[];
+  content: string;
 }

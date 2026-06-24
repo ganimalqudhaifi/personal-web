@@ -4,6 +4,8 @@ import { notFound, redirect } from "next/navigation";
 import { FaGithub } from "react-icons/fa";
 import { HiExternalLink } from "react-icons/hi";
 import { IoMdArrowRoundBack } from "react-icons/io";
+import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 import Divider from "@/components/Divider";
 import Icon from "@/components/Icon";
@@ -25,10 +27,6 @@ export default async function Page({
   const project = projectList.find((project) => project.slug === slug);
 
   if (!project) redirect("/projects");
-
-  const { default: Content } = await import(
-    `@/features/projects/markdown/${slug}.mdx`
-  );
 
   return (
     <div className="min-h-screen w-full bg-zinc-900">
@@ -79,7 +77,9 @@ export default async function Page({
             className="w-full rounded"
           />
           <MdxLayout>
-            <Content />
+            <Markdown remarkPlugins={[remarkGfm]}>
+              {project.content}
+            </Markdown>
           </MdxLayout>
         </div>
       </div>
