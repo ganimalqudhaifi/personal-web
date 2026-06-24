@@ -1,10 +1,18 @@
+/**
+ * generate-placeholder.ts
+ *
+ * Generates low-quality image placeholders (LQIP) for all images in the /public directory.
+ *
+ * Usage: npx tsx scripts/generate-placeholder.ts
+ */
+
 import lqip from 'lqip-modern'
 import fs from 'fs'
 import path from 'path'
 import { Placeholders } from '@/types';
 
 export const generatePlaceholders = async () => {
-  const imageDirectories = [path.join(__dirname, '../../public'), path.join(__dirname, '../../public/logo')];
+  const imageDirectories = [path.join(__dirname, '../public'), path.join(__dirname, '../public/logo')];
   const placeholders: Placeholders = {};
 
   for (const imageDirectory of imageDirectories) {
@@ -28,7 +36,7 @@ export const generatePlaceholders = async () => {
   }
 
   fs.writeFileSync(
-    path.join(__dirname, '../data/placeholders.json'),
+    path.join(__dirname, '../src/data/placeholders.json'),
     JSON.stringify(placeholders, null, 2)
   );
 

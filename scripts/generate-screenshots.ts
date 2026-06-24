@@ -23,7 +23,7 @@ export async function generateScreenshots() {
   console.log("🚀 Launching Playwright browser...");
   const browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({
-    viewport: { width: 1280, height: 800 },
+    viewport: { width: 1280, height: 832 },
     deviceScaleFactor: 2,
   });
 
@@ -34,7 +34,7 @@ export async function generateScreenshots() {
     try {
       console.log(`📸 Capturing ${project.slug}...`);
       await page.goto(project.url, {
-        waitUntil: "load",
+        waitUntil: "domcontentloaded",
         timeout: 30000,
       });
 
@@ -45,7 +45,6 @@ export async function generateScreenshots() {
 
       await page.screenshot({
         path: outputPath,
-        fullPage: true,
       });
 
       console.log(`✅ Saved: ${project.file}`);
