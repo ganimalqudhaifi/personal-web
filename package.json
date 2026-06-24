@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/prebuild.mjs && next build",
+    "build": "npx tsx scripts/prebuild.ts && next build",
     "start": "next start",
     "lint": "next lint"
   },

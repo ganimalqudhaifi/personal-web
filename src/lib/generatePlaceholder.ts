@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import { Placeholders } from '@/types';
 
-const generatePlaceholders = async () => {
+export const generatePlaceholders = async () => {
   const imageDirectories = [path.join(__dirname, '../../public'), path.join(__dirname, '../../public/logo')];
   const placeholders: Placeholders = {};
 

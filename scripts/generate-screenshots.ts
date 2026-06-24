@@ -1,44 +1,25 @@
 /**
- * generate-screenshots.mjs
+ * generate-screenshots.ts
  *
  * Runs Playwright to take full-page screenshots of each project's demo URL
  * and saves them as PNG files in the /public directory.
  *
- * Usage: node scripts/generate-screenshots.mjs
+ * Usage: npx tsx scripts/generate-screenshots.ts
  */
-import fs from "fs";
 import path from "path";
-import { chromium } from "playwright";
 import { fileURLToPath } from "url";
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-const projects = [
-  {
-    slug: "synth-ai",
-    url: "https://synth-ai.ganimalqudhaifi.my.id",
-    file: "project-synth-ai.png",
-  },
-  {
-    slug: "financial-records",
-    url: "https://financial-records.ganimalqudhaifi.my.id",
-    file: "project-financial-records.png",
-  },
-  {
-    slug: "rains-karya-multindo",
-    url: "https://rains-km.co.id/",
-    file: "project-rains-karya-multindo.png",
-  },
-  {
-    slug: "sudeci-exportir-indonesia",
-    url: "https://sudeci-exportir-indonesia.vercel.app/",
-    file: "project-sudeci-exportir.png",
-  },
-];
+import { chromium } from "playwright";
+import { projectList } from "../src/features/projects/data/ProjectList";
 
 const publicDir = path.resolve(__dirname, "../public");
 
-async function generateScreenshots() {
+const projects = projectList.map((p) => ({
+  slug: p.slug,
+  url: p.demoLink,
+  file: path.basename(p.imagePath),
+}));
+
+export async function generateScreenshots() {
   console.log("🚀 Launching Playwright browser...");
   const browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({
@@ -53,9 +34,11 @@ async function generateScreenshots() {
     try {
       console.log(`📸 Capturing ${project.slug}...`);
       await page.goto(project.url, {
-        waitUntil: "networkidle",
+        waitUntil: "load",
         timeout: 30000,
       });
+
+      // Wait for animations to finish after page load
 
       // Extra wait for any lazy-loaded content
       await page.waitForTimeout(2000);
@@ -67,7 +50,7 @@ async function generateScreenshots() {
 
       console.log(`✅ Saved: ${project.file}`);
     } catch (error) {
-      console.error(`❌ Failed to capture ${project.slug}:`, error.message);
+      console.error(`❌ Failed to capture ${project.slug}:`, (error as Error).message);
     } finally {
       await page.close();
     }
@@ -77,4 +60,7 @@ async function generateScreenshots() {
   console.log("🎉 All screenshots generated!");
 }
 
-generateScreenshots();
+// Run directly when called as a standalone script
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  generateScreenshots();
+}
